@@ -187,11 +187,33 @@
 </body>
 </html>
 <script>
-    if ((sessionStorage.getItem('hpsTombol'))== 'true'){
+    let score = 0;
+    let totalpertanyaan = 5;
+    let namadepan = sessionStorage.getItem('firstname');
+    let namabelakang =sessionStorage.getItem('lastname');
+    const nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
+    if ((sessionStorage.getItem('hpsTombol'))== 'true'){ 
             $('#kuiss').hide();
     }
     if ((sessionStorage.getItem('hpsTombol1'))== 'true'){
             $('#weton').hide();
+            
+    }
+    if ((sessionStorage.getItem('sudahmainweton'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Ramalan Primbon Weton Telah Berakhir',
+
+        }).then(function(){
+            sessionStorage.removeItem('sudahmainweton')
+        })
+    }
+    if ((sessionStorage.getItem('hpsTombol1'))== 'true' && (sessionStorage.getItem('hpsTombol'))== 'true' ){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Semua Game Telah Dimainkan! Silakan Kamu Boleh Log Out',
+            text: 'Tombol Log Out Di Bagian Pojok Kanan Atas'
+        })
     }
     $('#weton').click(function(){
         sessionStorage.setItem('weton','true');
@@ -204,6 +226,15 @@
         var namabelakang = namabelakang[0].toUpperCase() + namabelakang.substring(1);
         $('.avatar').html('<i class="fas fa-user me-1"></i>'+'Hi, '+namadepan+' '+namabelakang)
     })
+    $('#kuiss').click(function(){
+        score = 0;
+        sambutanpertanyaan();
+    })
 </script>
 <script src="jsku/logout.js"></script>
-<script src="jsku/tebak-tebakan.js"></script>
+<script src="pertanyaan/sambutanpertanyaan.js"></script>
+<script src="pertanyaan/pertanyaan1.js"></script>
+<script src="pertanyaan/pertanyaan2.js"></script>
+<script src="pertanyaan/pertanyaan3.js"></script>
+<script src="pertanyaan/pertanyaan4.js"></script>
+<script src="pertanyaan/pertanyaan5.js"></script>

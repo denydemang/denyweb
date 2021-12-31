@@ -9,7 +9,7 @@ $(function() {
         dateFormat: "DD, dd/mm/yy",
         changeYear: true,
         changeMonth: true,
-        yearRange: '1970:2015',
+        yearRange: '1945:2015',
         // defaultDate: '01/01/1999',
         dayNames: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
         dayNamesMin: ['Min','Sen','Sel','Rab','Kam','Jum','Sab'],

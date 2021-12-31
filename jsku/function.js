@@ -134,6 +134,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('hpsTombol1','true');
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
                 
                 
@@ -155,6 +156,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
 
             })
@@ -174,6 +176,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
 
             })
@@ -193,6 +196,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
             })
         })
@@ -211,6 +215,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
             })
         })
@@ -230,6 +235,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
             })
         })
@@ -248,6 +254,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
             })
         })
@@ -266,6 +273,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
                 sessionStorage.setItem('hpsTombol1','true');
+                sessionStorage.setItem('sudahmainweton','true');
                 location.reload();
                 
             })
