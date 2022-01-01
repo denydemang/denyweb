@@ -173,15 +173,17 @@ function pertanyaan5(){
                                     Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
                                 }).then(function(){
                                     setTimeout(function(){
+                                        sessionStorage.setItem('hpsTombol','true');
+                                        sessionStorage.setItem('score',score);
                                         location.reload();
-                                    },2000)
+                                    },1900)
+                                    
                                     
                                 })
                             })
                         } 
                     }).then(function(){
-                        sessionStorage.setItem('hpsTombol','true');
-                        sessionStorage.setItem('score',score);
+                        
                         
                     })
             })
