@@ -45,8 +45,10 @@ $(document).ready(function(){
         else {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
-                text: 'Maaf Nama Kamu Tidak Terdaftar', 
+                title: 'Oops...Maaf Nama Kamu Tidak Terdaftar',
+                text: 'Silakan Hubungi Pembuat Website Terkait', 
+            }).then(function(){
+                location.reload();
             })
         }
     
