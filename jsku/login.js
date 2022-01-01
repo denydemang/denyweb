@@ -9,10 +9,37 @@ let datauser = [
         namabelakang: "fajar"
     },
     {   namadepan : "ridwan",
-        namabelakang: "adi"
+        namabelakang: "nugroho"
     },
     {   namadepan : "isti",
         namabelakang: "ista"
+    },
+    {   namadepan : "dimas",
+        namabelakang: "cuy",
+    },
+    {   namadepan : "rizal",
+        namabelakang: "nugroho",
+    },
+    {   namadepan : "dedy",
+        namabelakang: "suprayogi",
+    },
+    {   namadepan : "yasin",
+        namabelakang: "fajar",
+    },
+    {   namadepan : "paramudhitya",
+        namabelakang: "fajar",
+    },
+    {   namadepan : "dewi",
+        namabelakang: "cahyaning",
+    },
+    {   namadepan : "ozata",
+        namabelakang: "maurinka",
+    },
+    {   namadepan : "vina",
+        namabelakang: "havita",
+    },
+    {   namadepan : "hasta",
+        namabelakang: "prasetya",
     },
 ]
 $(document).ready(function(){
