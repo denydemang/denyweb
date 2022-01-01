@@ -1,0 +1,61 @@
+.backgroundloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(to right, #ede6f5, #d6c5e6);
+    ;
+    animation: fadein1 2s ease forwards;
+
+}
+
+.loader {
+    background: url('../gif/loading.gif') no-repeat center;
+    background-image: no-repeat;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadein 2s ease forwards;
+    /* display: none; */
+
+}
+
+
+body {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}

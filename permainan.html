@@ -8,8 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="cssku/loading.css">
+    <link rel="stylesheet" href="cssku/permainan.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Document</title>
+    
+    <title>DemangCorp</title>
     <script>
     var login = sessionStorage.getItem('login');
     if (!login){
@@ -19,134 +22,16 @@
     
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Lobster');
         
-        .avatar{
-            color:rgb(10, 229, 236);
-            height:38px;
-            line-height: 38px;
-            margin-right:5px;
-        }
-        body{
-            background: linear-gradient(to right, #e13680, #a43ab2);
-        }
-        /* Extra small devices (phones, 600px and down) */
-        @media only screen and (max-width: 600px) {
-            .brand {
-            font-family: 'Lobster', cursive;
-            font-size: 1.2rem;   
-            }
-            .puter{
-                font-size:0.6rem !important;
-                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                background-color:#57194a ;
-                
-            }
-            span.icon i{
-                font-size:1.2rem ;
-            }
-            #kuiss {
-                font-size:12px;
-                font-family:Arial, Helvetica, sans-serif;
-                font-weight:bolder;
-            }
-            #kuiss:hover{
-                background-color: burlywood;
-            }
-            #kuiss:hover{
-                background-color: rgb(225, 159, 241);
-                color: red;
-            }
-            #weton:hover{
-                background-color: rgb(201, 235, 193);
-                color: rgb(32, 139, 62);
-            }
-            #weton {
-                font-size:12px;
-                font-family:Arial, Helvetica, sans-serif;
-                font-weight:bolder;
-            }
-        }
-        /* Small devices (portrait tablets and large phones, 600px and up) */
-        @media only screen and (min-width: 600px) {
-            .brand {
-            font-family: 'Lobster', cursive;
-            font-size: 1.6rem;
-            
-            
-        }
-            #kuiss {
-                font-size:20px;
-                font-family:Arial, Helvetica, sans-serif;
-                
-            }
-            #kuiss:hover{
-                background-color: rgb(225, 159, 241);
-                color: red;
-            }
-            #weton:hover{
-                background-color: rgb(201, 235, 193);
-                color: rgb(32, 139, 62);
-            }
-            #weton {
-                font-size:20px;
-                font-family:Arial, Helvetica, sans-serif;
-                
-            }
-        }
-        /* Large devices (laptops/desktops, 992px and up) */
-        @media only screen and (min-width: 992px) {
-            .brand {
-            font-family: 'Lobster', cursive;
-            font-size: 1.8rem;
-            
-            }
-            #kuiss {
-                font-size:25px;
-                font-family:Arial, Helvetica, sans-serif;
-                
-            }
-            #kuiss:hover{
-                background-color: rgb(225, 159, 241);
-                color: red;
-            }
-            #weton:hover{
-                background-color: rgb(201, 235, 193);
-                color: rgb(32, 139, 62);
-            }
-            #weton {
-                font-size:25px;
-                font-family:Arial, Helvetica, sans-serif;
-            }
-        }
-        /* Extra large devices (large laptops and desktops, 1200px and up) */
-        @media only screen and (min-width: 1200px) {
-            .brand {
-            font-family: 'Lobster', cursive;
-            font-size: 2rem;
-            
-            }
-            #kuiss {
-                font-size:28px;
-                font-family:Arial, Helvetica, sans-serif;
-            }
-            #kuiss:hover{
-                background-color: rgb(225, 159, 241);
-                color: red;
-            }
-            #weton:hover{
-                background-color: rgb(201, 235, 193);
-                color: rgb(32, 139, 62);
-            }
-        
-            #weton {
-                font-size:28px;
-                font-family:Arial, Helvetica, sans-serif;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- element Saat Web Loading -->
+    <div class="backgroundloader">  
+    </div>
+    <div class="loader">
+    </div>
+    <!-- end element saat web loading -->
     <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: linear-gradient(to right ,#e13680, #a43ab2);border-bottom:2px solid white">
         <div class="container">
             <a href="#" class="navbar-brand brand">Demang Corp</a>
@@ -187,6 +72,12 @@
 </body>
 </html>
 <script>
+    //Saat Loading Web
+    $(window).on('load',function(){
+        $('.loader').css('display','none');
+        $('.backgroundloader').css('display','none')
+    })
+
     let score = 0;
     let totalpertanyaan = 5;
     let namadepan = sessionStorage.getItem('firstname');

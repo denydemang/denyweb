@@ -1,0 +1,53 @@
+#datetimepicker1,
+#datetimepicker2 {
+    background-color: white;
+}
+
+.menutama {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(129, 120, 214);
+    margin: 5px;
+    color: seashell;
+
+}
+
+.menutama:hover {
+    background-color: rgb(120, 214, 133);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 290px;
+        margin: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    form {
+        width: 350px;
+        margin: auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    form {
+        width: 550px;
+        margin: auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    form {
+        width: 550px;
+        margin: auto;
+    }
+}
