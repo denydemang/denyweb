@@ -17,9 +17,56 @@
             document.location.href="permainan.html"
         }
     </script>
-    
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+        .dmk  {
+            display:inline-block;
+            overflow:hidden;
+            white-space:nowrap;
+            font-family:'Roboto';
+            }
+
+        .satu {    /* For increasing performance 
+                            ID/Class should've been used. 
+                            For a small demo 
+                            it's okaish for now */
+        animation: showup 7s infinite;
+        }
+
+        .dua {
+        width:0px;
+        animation: reveal 7s infinite;
+        }
+
+       .dua span {
+        margin-left:-355px;
+        animation: slidein 7s infinite;
+        }
+        @keyframes showup {
+            0% {opacity:0;}
+            20% {opacity:1;}
+            80% {opacity:1;}
+            100% {opacity:0;}
+        }
+
+        @keyframes slidein {
+            0% { margin-left:-800px; }
+            20% { margin-left:-800px; }
+            35% { margin-left:0px; }
+            100% { margin-left:0px; }
+        }
+
+        @keyframes reveal {
+            0% {opacity:0;width:0px;}
+            20% {opacity:1;width:0px;}
+            30% {width:355px;}
+            80% {opacity:1;}
+            100% {opacity:0;width:355px;}
+        }
+    </style>
 </head>
 <body> 
+   
     <!-- Loader -->
     <div class="backgroundloader">
     </div>
@@ -27,6 +74,12 @@
     </div>
     
     <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="dmk satu text-center">Escape</div> 
+            <div class="dmk dua"> 
+                <span>into amazing experiences</span>
+            </div>
+        </div>
         
         <!-- Modal Form Feedback -->
         <div class="modal fade" id="Feedback" tabindex="-1" aria-labelledby="FeedbackModalLabel" aria-hidden="true">

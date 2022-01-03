@@ -26,6 +26,7 @@
     </style>
 </head>
 <body>
+    
     <!-- element Saat Web Loading -->
     <div class="backgroundloader">  
     </div>
@@ -50,10 +51,13 @@
             </div>
         </div>
     </nav>
+    
     <div class="container d-flex justify-content-center align-items-center vh-100">
+       
         <div>
             <button class="btn btn-danger mx-auto shadow" id="kuiss" >TEBAK TEBAKAN</button>
             <button class="btn btn-success mx-auto shadow" id="weton">RAMALAN JAWA</button>
+            <button class="btn btn-info mx-auto shadow" id="tebakangka">TEBAK ANGKA</button>
         </div>
     </div>
     <footer class="text-center text-lg-start realitve-bottom">
@@ -109,6 +113,10 @@
     $('#weton').click(function(){
         sessionStorage.setItem('weton','true');
         document.location.href="weton.html"
+    })
+    $('#tebakangka').click(function(){
+        sessionStorage.setItem('tebakangka','true');
+        document.location.href="gametebakangka.html"
     })
     $(document).ready(function(){
         var namadepan = sessionStorage.getItem('firstname');

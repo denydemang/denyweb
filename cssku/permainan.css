@@ -35,8 +35,18 @@ body {
         font-weight: bolder;
     }
 
+    #tebakangka {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+    }
+
     #kuiss:hover {
         background-color: burlywood;
+    }
+
+    #tebakangka:hover {
+        background-color: rgb(135, 222, 157);
     }
 
     #kuiss:hover {
