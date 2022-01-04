@@ -4,10 +4,10 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 100;
-    background: linear-gradient(to right, #ede6f5, #d6c5e6);
-    ;
+    z-index: 8888;
+    background: #1e1c20;
     animation: fadein1 2s ease forwards;
+    /* display: none; */
 
 }
 
@@ -15,7 +15,7 @@
     background: url('../gif/loading.gif') no-repeat center;
     background-image: no-repeat;
     position: fixed;
-    z-index: 500;
+    z-index: 99999;
     top: 0;
     right: 0;
     bottom: 0;

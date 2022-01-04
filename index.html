@@ -18,51 +18,8 @@
         }
     </script>
     <style>
-         @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-        .dmk  {
-            display:inline-block;
-            overflow:hidden;
-            white-space:nowrap;
-            font-family:'Roboto';
-            }
-
-        .satu {    /* For increasing performance 
-                            ID/Class should've been used. 
-                            For a small demo 
-                            it's okaish for now */
-        animation: showup 7s infinite;
-        }
-
-        .dua {
-        width:0px;
-        animation: reveal 7s infinite;
-        }
-
-       .dua span {
-        margin-left:-355px;
-        animation: slidein 7s infinite;
-        }
-        @keyframes showup {
-            0% {opacity:0;}
-            20% {opacity:1;}
-            80% {opacity:1;}
-            100% {opacity:0;}
-        }
-
-        @keyframes slidein {
-            0% { margin-left:-800px; }
-            20% { margin-left:-800px; }
-            35% { margin-left:0px; }
-            100% { margin-left:0px; }
-        }
-
-        @keyframes reveal {
-            0% {opacity:0;width:0px;}
-            20% {opacity:1;width:0px;}
-            30% {width:355px;}
-            80% {opacity:1;}
-            100% {opacity:0;width:355px;}
-        }
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+    
     </style>
 </head>
 <body> 
@@ -74,13 +31,6 @@
     </div>
     
     <div class="container">
-        <div class="d-flex justify-content-center">
-            <div class="dmk satu text-center">Escape</div> 
-            <div class="dmk dua"> 
-                <span>into amazing experiences</span>
-            </div>
-        </div>
-        
         <!-- Modal Form Feedback -->
         <div class="modal fade" id="Feedback" tabindex="-1" aria-labelledby="FeedbackModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -115,20 +65,24 @@
 
         <div class="row d-flex align-items-center justify-content-center vh-100">
             <div class="card formlogin p-0 shadow-lg rounded-5">
-                <div class="card-header card-head">
-                    <h2 class="card-title text-center headerlogin"></h2>
+                <div class="card-header card-head">  
                 </div>
-                <div class="card-body" style="background-color: rgb(136, 214, 224);">
+                <div class="bungkusjudul">
+                    <p>
+                        <span class="judul"></span><span class="cursor">&nbsp;</span>
+                    </p>    
+                </div>
+                <div class="card-body" style="background-color:rgb(190,201,216)">
                     <form id="myform" action="">
                         <div class="mb-3">
-                            <label for="" class="form-label fw-bolder" style="color:rgb(54, 77, 104)"> Nama Depan</label>
+                            <label for="" class="form-label fw-bolder" style="color:rgb(18, 41, 66)"> Nama Depan</label>
                             <input type="text" id="namadepan" class="namadepan form-control" placeholder="Masukkan Nama Depanmu" autocomplete="off">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label fw-bolder" style="color:rgb(54, 77, 104)" > Nama Belakang</label>
                             <input type="text" id="namabelakang" class="namabelakang form-control" placeholder="Masukkan Nama Belakangmu" autocomplete="off">
                         </div>
-                        <input type="button" class="submit btn btn-primary float-end my-3 w-100" value="Masuk">
+                        <input type="button" class="submit tombolmasuk btn my-3 w-100" value="Masuk">
                     </form>
                 </div>
             </div>    
@@ -139,6 +93,7 @@
     
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="jsku/typinganimation.js"></script>
 <script>
     //Saat Loading Web
     $(window).on('load',function(){

@@ -1,7 +1,6 @@
 var kesempatan = 3;
 let angkabenar = Math.floor((Math.random()*10)+1)
 $(document).ready(function(){
-    
     $('.tombol1').hide();
     $('.kesempatan span').html(kesempatan);
     play('fadeout');
@@ -74,6 +73,15 @@ $(document).ready(function(){
             'transform': 'scale(0.8,0.8)',
         },
     }])
+    
+    function pause() {
+        // freeze keyframe animation and kill callback
+        $('.huruf').pauseKeyframe();
+    }
+    function resume() {
+        // resume keyframe animation
+        $('.huruf').resumeKeyframe();
+    }
 
     function play(animation) {
         $('.huruf').resetKeyframe(function () {
@@ -102,27 +110,35 @@ $(document).ready(function(){
     }
     $('.tombol1').on('click',function(){
         location.reload();
+        
     })
     $('.tombol').on('click', function () {
         let input = parseInt($('#input').val());
         // console.log('angkabenar'+angkabenar);
         // console.log('input'+input);
-
-        if (!input ){
+        if (input > 10 || input === 0){
+            pause();
+            Swal.fire({
+                icon: 'warning',
+                title: 'Masukkan Angka 1-10'
+            }).then(function(){
+                resume();
+            })
+        }
+        else if (!input ){
+            pause();
             Swal.fire({
                 icon: 'warning',
                 title : 'Ooopps',
                 text: 'Jawaban Tidak Boleh Kosong',
+            }).then(function(){
+                resume();
             })
             
         }
-        else if (input >10){
-            Swal.fire({
-                icon: 'warning',
-                title: 'Masukkan Angka 1-10'
-            })
-        }
+    
         else if (input === angkabenar){
+            pause();
             Swal.fire({
                 icon: 'success',
                 title : 'Jawaban Kamu Benar',
@@ -133,6 +149,7 @@ $(document).ready(function(){
                 $('.tombol1').show();
                 $('.huruf').html(angkabenar);
                 $('.huruf').css({"color": "blue", "font-size": "70px", "font-weight":"bolder"})
+                resume();
             })
         }
         else if(input > angkabenar){
@@ -140,6 +157,7 @@ $(document).ready(function(){
                 
                 $('.kesempatan span').html(kesempatan);
                 if (kesempatan === 0){
+                    pause();
                     Swal.fire ({
                         icon: 'warning',
                         title: 'Opppss',
@@ -147,8 +165,10 @@ $(document).ready(function(){
                     }).then(function(){
                         Swal.fire({
                             icon: 'info',
-                            title: 'Jawaban Yang Benar Adalah '+angkabenar
+                            title: 'Jawaban Yang Benar Adalah '+angkabenar,
+                            customClass: 'swal-wide',
                         }).then(function(){
+                            resume();
                             $('#input').prop('disabled',true);
                             $('.tombol').hide();
                             $('.tombol1').show();
@@ -161,11 +181,11 @@ $(document).ready(function(){
                     return false;
                 }
                 play('dmk');
-                $('.keterangan').html('Jawaban Kamu Salah, Tebakanmu Kelebihan &#128513');
+                $('.keterangan').html('Jawaban Kamu Salah,tebakanmu melampaui jawaban yang benar<span>&#128513</span>');
                 $('.keterangan').css('display','inline-block');
                 setTimeout(function () {
                     $('.keterangan').css('display','none');
-                }, 2700)
+                }, 3000)
                 
                 setTimeout(function () {
                 play('fadeout');
@@ -177,6 +197,7 @@ $(document).ready(function(){
             
             $('.kesempatan span').html(kesempatan);
             if (kesempatan ===0){
+                pause();
                 Swal.fire ({
                     icon: 'warning',
                     title: 'Opppss',
@@ -185,8 +206,10 @@ $(document).ready(function(){
                 }).then(function(){
                     Swal.fire({
                         icon: 'info',
-                        title: 'Jawaban Yang Benar Adalah '+angkabenar
+                        title: 'Jawaban Yang Benar Adalah '+angkabenar,
+                        customClass: 'swal-wide',
                     }).then(function(){
+                        resume();
                         // $('.tombol').prop('disabled',true);
                         $('#input').prop('disabled',true);
                         $('.tombol').hide();
@@ -201,11 +224,11 @@ $(document).ready(function(){
                 
             }
             play('dmk');
-            $('.keterangan').html('Jawaban Kamu Salah, Tebakanmu Masih Kurang &#128513');
+            $('.keterangan').html('Jawaban Kamu Salah, Tebakanmu Dibawah Dari Jawaban Yang Benar &#128513');
             $('.keterangan').css('display','inline-block');
             setTimeout(function () {
                 $('.keterangan').css('display','none');
-               }, 2700)
+               }, 3000)
                  setTimeout(function () {
                  play('fadeout');
                 }, 400)
