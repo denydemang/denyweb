@@ -53,14 +53,16 @@
 </body>
 <script src="jsku/tebakangka.js"></script>
 <script>
+    if (!sessionStorage.getItem('tebakangka')){
+        document.location.href="permainan.html"
+    }
         $(window).on('load',function(){
         $('#loading').remove()
         })
 
         $('.menutama').click(function(){
         document.location.href="permainan.html";
-        sessionStorage.setItem('SudahMainTebakAngka','true');
-
+        sessionStorage.removeItem('tebakangka');
         })
     
 </script>

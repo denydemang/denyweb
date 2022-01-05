@@ -42,8 +42,17 @@
     font-family: "Poppins", sans-serif;
 }
 
+.pilihpermainan {
+    margin-top: -10px;
+    width: 400px;
+    background-color: rgb(166, 58, 175);
+    color: rgb(250, 245, 245);
+    font-weight: 700;
+    font-family: 'Poppins';
+}
+
 .judul h4 {
-    line-height: 50px;
+    line-height: 60px;
     letter-spacing: 2px;
     color: rgb(248, 240, 240);
 }
@@ -58,7 +67,7 @@ body {
         margin-top: 50px;
         display: flex;
         /* outline: 2px solid red; */
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         color: white;
         box-sizing: border-box;
@@ -66,7 +75,7 @@ body {
 
     .judul h1 {
         margin: 0;
-        font-size: 38px;
+        font-size: 28px;
         font-weight: 700;
         line-height: 39px;
         color: rgb(242, 235, 58);
@@ -77,10 +86,10 @@ body {
     }
 
     .judul h2 {
-        margin-top: 8px;
-        font-size: 32px;
+        margin-top: 3px;
+        font-size: 25px;
         font-weight: 700;
-        line-height: 45px;
+        line-height: 30px;
         letter-spacing: 4px;
         color: rgb(10, 229, 236);
         font-family: "Poppins", sans-serif;
@@ -89,16 +98,25 @@ body {
     }
 
     .judul h4 {
+
         line-height: 50px;
         letter-spacing: 2px;
         color: rgb(248, 240, 240);
         font-size: 18px;
     }
 
+    .pilihpermainan {
+        margin-top: -14px;
+        width: 200px;
+        background-color: rgb(166, 58, 175);
+        color: rgb(250, 245, 245);
+        font-weight: 700;
+        font-family: 'Poppins';
+    }
 
     .brand {
         font-family: 'Lobster', cursive;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .puter {
@@ -112,41 +130,7 @@ body {
         font-size: 1.2rem;
     }
 
-    #kuiss {
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bolder;
-    }
 
-    #tebakangka {
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bolder;
-    }
-
-    #kuiss:hover {
-        background-color: burlywood;
-    }
-
-    #tebakangka:hover {
-        background-color: rgb(135, 222, 157);
-    }
-
-    #kuiss:hover {
-        background-color: rgb(225, 159, 241);
-        color: red;
-    }
-
-    #weton:hover {
-        background-color: rgb(201, 235, 193);
-        color: rgb(32, 139, 62);
-    }
-
-    #weton {
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bolder;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -189,26 +173,7 @@ body {
 
     }
 
-    #kuiss {
-        font-size: 25px;
-        font-family: Arial, Helvetica, sans-serif;
 
-    }
-
-    #kuiss:hover {
-        background-color: rgb(225, 159, 241);
-        color: red;
-    }
-
-    #weton:hover {
-        background-color: rgb(201, 235, 193);
-        color: rgb(32, 139, 62);
-    }
-
-    #weton {
-        font-size: 25px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -219,23 +184,5 @@ body {
 
     }
 
-    #kuiss {
-        font-size: 28px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    #kuiss:hover {
-        background-color: rgb(225, 159, 241);
-        color: red;
-    }
-
-    #weton:hover {
-        background-color: rgb(201, 235, 193);
-        color: rgb(32, 139, 62);
-    }
-
-    #weton {
-        font-size: 28px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 }

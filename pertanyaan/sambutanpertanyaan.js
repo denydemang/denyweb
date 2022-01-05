@@ -17,6 +17,7 @@ function sambutanpertanyaan(){
                 }).then(function(){
                     // Masuk Ke Pertanyaan Pertama
                     sessionStorage.setItem('udahMain','true');
+                    sessionStorage.setItem('udahMainTebakan','true');
                     pertanyaan1();
                 })
             } else if (result.isDenied){

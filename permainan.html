@@ -54,8 +54,14 @@
         <section class="container d-flex justify-content-center vh-100">
             <div class="judul">
                 <h1>Hi, Selamat Datang </h1>
-                <h2>Adi Nugroho</h2>
-                <h4>Silakan Pilih Permainan</h4>
+                <h2>Rizal Adi Nugroho</h2>
+                <h4>Silakan Dipilih</h4>
+                <select class="form-select pilihpermainan" aria-label="Default select example">
+                    <option selected disabled>Pilih Menu</option>
+                    <option value="tebaktebakan" id="tebaktebakan">TEBAK TEBAKAN</option>
+                    <option value="tebakangka" id="tebakangka">TEBAK ANGKA</option>
+                    <option value="primbonjawa" id="primbonjawa">PRIMBON JAWA</option>
+                </select>
             </div>
         </section>
         
@@ -91,47 +97,81 @@
     let namadepan = sessionStorage.getItem('firstname');
     let namabelakang =sessionStorage.getItem('lastname');
     const nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
-    if ((sessionStorage.getItem('hpsTombol'))== 'true'){ 
-            $('#kuiss').hide();
-    }
-    if ((sessionStorage.getItem('hpsTombol1'))== 'true'){
-            $('#weton').hide();
-            
-    }
-    if ((sessionStorage.getItem('sudahmainweton'))=='true'){
-        Swal.fire({
-            icon: 'warning',
-            title: 'Session Ramalan Primbon Weton Telah Berakhir',
 
-        }).then(function(){
-            sessionStorage.removeItem('sudahmainweton')
-        })
+    if ((sessionStorage.getItem('disabledTebakAngka'))== 'true') {
+        $('#tebakangka').prop('disabled',true);
     }
-    if ((sessionStorage.getItem('hpsTombol1'))== 'true' && (sessionStorage.getItem('hpsTombol'))== 'true' ){
+    if ((sessionStorage.getItem('disabledTebakan'))== 'true') {
+        $('#tebaktebakan').prop('disabled',true);
+    }
+    if ((sessionStorage.getItem('disabledWeton'))== 'true'){
+        $('#primbonjawa').prop('disabled',true);
+    }
+    if ((sessionStorage.getItem('disabledWeton'))== 'true' && (sessionStorage.getItem('disabledTebakAngka'))== 'true' && (sessionStorage.getItem('disabledTebakan'))== 'true' ){
         Swal.fire({
             icon: 'warning',
             title: 'Semua Game Telah Dimainkan! Silakan Kamu Boleh Log Out',
             text: 'Tombol Log Out Di Bagian Pojok Kanan Atas'
         })
     }
-    $('#weton').click(function(){
-        sessionStorage.setItem('weton','true');
-        document.location.href="weton.html"
-    })
-    $('#tebakangka').click(function(){
-        sessionStorage.setItem('tebakangka','true');
-        document.location.href="gametebakangka.html"
-    })
+    else if ((sessionStorage.getItem('SudahMainWeton'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Ramalan Primbon Weton Telah Berakhir',
+
+        }).then(function(){
+            sessionStorage.setItem('disabledWeton','true');
+            // $('#primbonjawa').prop('disabled',true);
+            sessionStorage.removeItem('SudahMainWeton');
+            location.reload()
+        });
+    }
+    else if ((sessionStorage.getItem('SudahMainTebakAngka'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Main Tebak Angka Sudah Selesai',
+        }).then(function(){
+            sessionStorage.setItem('disabledTebakAngka','true');
+            // $('#tebakangka').prop('disabled',true);
+            sessionStorage.removeItem('SudahMainTebakAngka');
+            location.reload()
+        })
+    }
+    else if ((sessionStorage.getItem('udahMainTebakan'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Main Tebak Tebakan Sudah Selesai',
+        }).then(function(){
+            sessionStorage.setItem('disabledTebakan','true');
+            // $('#tebakangka').prop('disabled',true);
+            sessionStorage.removeItem('udahMainTebakan');
+            location.reload()
+        })
+    }
+    
+    
     $(document).ready(function(){
         var namadepan = sessionStorage.getItem('firstname');
         var namabelakang = sessionStorage.getItem('lastname');
         var namadepan = namadepan[0].toUpperCase() + namadepan.substring(1);
         var namabelakang = namabelakang[0].toUpperCase() + namabelakang.substring(1);
-        $('.avatar').html('<i class="fas fa-user me-1"></i>'+'Hi, '+namadepan+' '+namabelakang)
-    })
-    $('#kuiss').click(function(){
-        score = 0;
-        sambutanpertanyaan();
+        $('.avatar').html('<i class="fas fa-user me-1"></i>'+' '+namadepan+' '+namabelakang);
+
+        $('.pilihpermainan').on('change',function(){
+            var val = $(this).val();
+            if (val == 'tebaktebakan') {
+                score = 0;
+                sambutanpertanyaan();
+            }
+            else if (val =='primbonjawa') {
+                sessionStorage.setItem('weton','true');
+                document.location.href="weton.html"
+            }
+            else if (val == 'tebakangka') {
+                sessionStorage.setItem('tebakangka','true');
+                document.location.href="gametebakangka.html"
+            }
+        })
     })
 </script>
 <script src="jsku/logout.js"></script>

@@ -144,6 +144,8 @@ $(document).ready(function(){
                 title : 'Jawaban Kamu Benar',
                 text: 'Jawabannya adalah '+angkabenar,
             }).then(function(){
+                sessionStorage.setItem('udahMain','true');
+                sessionStorage.setItem('SudahMainTebakAngka','true');
                 $('#input').prop('disabled',true);
                 $('.tombol').hide();
                 $('.tombol1').show();
@@ -168,6 +170,8 @@ $(document).ready(function(){
                             title: 'Jawaban Yang Benar Adalah '+angkabenar,
                             customClass: 'swal-wide',
                         }).then(function(){
+                            sessionStorage.setItem('udahMain','true');
+                            sessionStorage.setItem('SudahMainTebakAngka','true');
                             resume();
                             $('#input').prop('disabled',true);
                             $('.tombol').hide();
@@ -209,6 +213,8 @@ $(document).ready(function(){
                         title: 'Jawaban Yang Benar Adalah '+angkabenar,
                         customClass: 'swal-wide',
                     }).then(function(){
+                        sessionStorage.setItem('udahMain','true');
+                        sessionStorage.setItem('SudahMainTebakAngka','true');
                         resume();
                         // $('.tombol').prop('disabled',true);
                         $('#input').prop('disabled',true);
