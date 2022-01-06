@@ -7,6 +7,9 @@ $(document).ready(function () {
         $('#tgluser').val(tgluser)
     var tgldoi = sessionStorage.getItem('tgldoi');
         $('#tgldoi').val(tgldoi);
+    var score = sessionStorage.getItem('score');
+        $('#score').val(score);
+    
 
 });
 
@@ -16,6 +19,13 @@ $(document).ready(function(){
     $("#rate").change(function(){
         var val = $(this).val();
         var val = val * 20;
-        $("#keteranganrate").html('Nilai Yang Diberikan '+val);
+        if (val >= 70) {
+            $("#keteranganrate").css('color','blue');
+            $("#keteranganrate").html('Nilai Yang Diberikan '+val);
+        } else {
+            $("#keteranganrate").css('color','red');
+            $("#keteranganrate").html('Nilai Yang Diberikan '+val);
+        }
+        
     })
 })

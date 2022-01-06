@@ -69,7 +69,12 @@
         .puter {
             color:rgb(33, 29, 33)
         }
-
+        @media only screen and (orientation:potrait) {
+            body {
+                height: 100vw;
+                transform: rotate(90deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -82,7 +87,7 @@
         <!-- Copyright -->
         <div class="text-center text-white p-1 puter">
             © 2021 Copyright:
-            <span class="text-reset dmk">DeManK CORP</span>
+            <span class="text-reset dmk">Deny Kurniawan</span>
             <div class="">MADE WITH <span class="text-danger"> &#10084;</span></div>
             <!-- <div class="my-1 me-2">
                 <a href="https://www.facebook.com" target="_blank"><span style="font-size:25px;" class="mx-1 text-white icon"><i class="fab fa-facebook"></i></span></a>
@@ -93,6 +98,40 @@
     </footer>
 </body>
 <script>
+    const judul = document.querySelector(".typed-text");
+const textArray = ["SUGENG RAWUH", "WELCOME TO MY WEBSITE","SILAKAN LOGIN DULU KAK"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000;
+let textArrayIndex = 0;
+let charIndex = 0;
+// let dmk = textArray[textArrayIndex].charAt(0);
 
+// console.log(dmk);
+function type(){
+if(charIndex < textArray[textArrayIndex].length){
+    judul.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+} else{
+    //erase
+    setTimeout(erase, newTextDelay);
+
+}
+}
+function erase(){
+if (charIndex > 0){
+    judul.textContent = textArray[textArrayIndex].substring(0,charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+}else {
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex=0
+    setTimeout(type, typingDelay + 1100);
+}
+}
+document.addEventListener("DOMContentLoaded",function(){
+setTimeout(type, newTextDelay + 250);
+});
 </script>
 </html>
