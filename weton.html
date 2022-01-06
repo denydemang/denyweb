@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="cssku/loading.css">
+    <link rel="stylesheet" href="cssku/loader.css">
     <link rel="stylesheet" type="text/css" href="jquery-ui-1.13.0/jquery-ui.css" >
     <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.structure.css">
     <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.theme.css">
@@ -29,63 +29,67 @@
 
 </head>
 <body>
-    <div class="backgroundloader">
-        
-    </div>
-    <div class="loader">
-    </div>
-    <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: rgb(80, 119, 155);border-bottom:2px solid white">
-        <div class="container">
-            <a href="#" class="navbar-brand brand" style="font-family:'Lobster';font-size:22px;color:rgb(231, 236, 243)">Demang Corp</a>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <div class="Menu Utama"><button class="btn menutama mt-2">Menu Utama</button></div>
-                    </li>
-                </ul>   
+    <!-- Loader Animation -->
+    <div class="bungkus-loader-weton">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </nav>
-    
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card shadow">
-            <div class="card-body">
-                <h4 class="mb-4 card-title">Ramalan Primbon Jawa &#9892;</h4>
-                <form action="">
-                    <div class="row">
-                        <div class="bungkusweton col-auto mb-3">
-                            <label for="" class="form-label">Tanggal Lahir Kamu &#9884;</label>
-                            <div class="input-group mb-1">
-                                <span class="input-group-text col-lg-" id="basic-addon1">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <input id="datetimepicker1" type="text" class="form-control datetimepicker" autocomplete="off" readonly>
-                            <!-- <button class="btn btn-success" style="margin-left:10-px">Cari Tahu Weton</button> -->
-                            </div>
-                            <label for="" class="form-label">Weton Kamu</label>
-                            <div class="input-group">
-                                <input type="text" readonly class="form-control hasilweton1">
-                            </div>
-                        </div>
-                        <div class="bungkusweton col-auto mb-3">
-                            <label for="" class="form-label">Tanggal Lahir Doi &#10084;</label>
-                            <div class="input-group mb-1">
-                                <span class="input-group-text col-lg-" id="basic-addon1">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <input id="datetimepicker2" type="text" class="form-control datetimepicker" autocomplete="off" readonly>
-                                <!-- <button class="btn btn-success" style="margin-left:10-px">Cari Tahu Weton</button> -->
-                            </div>
-                            <label for="" class="form-label">Weton Doi</label>
-                            <div class="input-group">
-                                <input type="text" readonly class="form-control hasilweton2">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-danger fw-bolder hasil"> Hasil </button>
-                </form>
-                        
+    </div>
+    <div class="bungkussemuanya">
+        <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: rgb(80, 119, 155);border-bottom:2px solid white">
+            <div class="container">
+                <a href="#" class="navbar-brand brand" style="font-family:'Lobster';font-size:22px;color:rgb(231, 236, 243)">Demang Corp</a>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <div class="Menu Utama"><button class="btn menutama mt-2">Menu Utama</button></div>
+                        </li>
+                    </ul>   
             </div>
-        </div>
+        </nav>
         
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="mb-4 card-title">Ramalan Primbon Jawa &#9892;</h4>
+                    <form action="">
+                        <div class="row">
+                            <div class="bungkusweton col-auto mb-3">
+                                <label for="" class="form-label">Tanggal Lahir Kamu &#9884;</label>
+                                <div class="input-group mb-1">
+                                    <span class="input-group-text col-lg-" id="basic-addon1">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </span>
+                                    <input id="datetimepicker1" type="text" class="form-control datetimepicker" autocomplete="off" readonly>
+                                <!-- <button class="btn btn-success" style="margin-left:10-px">Cari Tahu Weton</button> -->
+                                </div>
+                                <label for="" class="form-label">Weton Kamu</label>
+                                <div class="input-group">
+                                    <input type="text" readonly class="form-control hasilweton1">
+                                </div>
+                            </div>
+                            <div class="bungkusweton col-auto mb-3">
+                                <label for="" class="form-label">Tanggal Lahir Doi &#10084;</label>
+                                <div class="input-group mb-1">
+                                    <span class="input-group-text col-lg-" id="basic-addon1">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </span>
+                                    <input id="datetimepicker2" type="text" class="form-control datetimepicker" autocomplete="off" readonly>
+                                    <!-- <button class="btn btn-success" style="margin-left:10-px">Cari Tahu Weton</button> -->
+                                </div>
+                                <label for="" class="form-label">Weton Doi</label>
+                                <div class="input-group">
+                                    <input type="text" readonly class="form-control hasilweton2">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-danger fw-bolder hasil"> Hasil </button>
+                    </form>
+                            
+                </div>
+            </div>
+    </div>   
 
     </div>
     
@@ -95,8 +99,8 @@
 <script>
     //Saat Loading Web
     $(window).on('load',function(){
-        $('.loader').css('display','none');
-        $('.backgroundloader').css('display','none')
+        $('.bungkus-loader-weton').fadeOut(1000);
+        $('.bungkussemuanya').fadeIn(1000);
     })
     $(document).ready(function(){
         $('.menutama').click(function(){

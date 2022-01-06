@@ -3,7 +3,11 @@
 
 body {
     background: linear-gradient(to right, #e13680, #a43ab2);
+
+
 }
+
+
 
 .avatar {
     color: rgb(10, 229, 236);
@@ -125,7 +129,7 @@ body {
         font-size: 25px;
         font-weight: 700;
         line-height: 30px;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
         color: rgb(247, 246, 242);
         font-family: "Poppins", sans-serif;
 

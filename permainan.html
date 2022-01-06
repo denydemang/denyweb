@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="cssku/permainan.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="cssku/loader.css">
+    <!-- <link rel="stylesheet" href="cssku/loader.css"> -->
     <title>DemangCorp</title>
     <script>
     var login = sessionStorage.getItem('login');
@@ -28,70 +30,76 @@
 <body>
     
     <!-- element Saat Web Loading -->
-    <div class="backgroundloader">  
-    </div>
-    <div class="loader">
+    <div class="bungkus-loader-permainan">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <!-- end element saat web loading -->
-    <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: linear-gradient(to right ,#e13680, #a43ab2);border-bottom:2px solid white">
-        <div class="container">
-            <a href="#" class="navbar-brand brand">Demang Corp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <div class="avatar"></div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="keluar"><button class="btn fw-bold" style="background-color: chartreuse;color:white;">Keluar</button></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-        <section class="container d-flex justify-content-around vh-100">
-            <div class="judul">
-                <h1>Hi, Selamat Datang </h1>
-                <h2></h2>
-                <div class="bungkusoption">
-                    <h4>Silakan Dipilih</h4>
-                    <select class="form-select pilihpermainan" aria-label="Default select example">
-                        <option selected disabled>Pilih Menu</option>
-                        <option value="tebaktebakan" id="tebaktebakan">TEBAK TEBAKAN</option>
-                        <option value="tebakangka" id="tebakangka">TEBAK ANGKA</option>
-                        <option value="primbonjawa" id="primbonjawa">PRIMBON JAWA</option>
-                    </select>
+    <div class="bungkusemuanya">
+        <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: linear-gradient(to right ,#e13680, #a43ab2);border-bottom:2px solid white">
+            <div class="container">
+                <a href="#" class="navbar-brand brand">Demang Corp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <div class="avatar"></div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="keluar"><button class="btn fw-bold" style="background-color: chartreuse;color:white;">Keluar</button></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        
-        <!-- <div>
-            <button class="btn btn-danger mx-auto shadow" id="kuiss" >TEBAK TEBAKAN</button>
-            <button class="btn btn-success mx-auto shadow" id="weton">RAMALAN JAWA</button>
-            <button class="btn btn-info mx-auto shadow" id="tebakangka">TEBAK ANGKA</button>
-        </div> -->
-    <footer class="text-center text-lg-start realitve-bottom">
-        <!-- Copyright -->
-        <div class="text-center text-white p-1 puter">
-            © 2021 Copyright:
-            <span class="text-reset fw-bold">DMK CORP</span>
-            <div class="fw-bold">MADE WITH <span class="text-danger"> &#10084;</span></div>
-            <div class="my-1 me-2">
-                <a href="https://www.facebook.com" target="_blank"><span style="font-size:25px;" class="mx-1 text-white icon"><i class="fab fa-facebook"></i></span></a>
-                <a href="https://www.instagram.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-instagram"></i></span></a>
-                <a href="https://www.whatsapp.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-whatsapp"></i></span></a>
+        </nav>
+            
+            <section class="container d-flex justify-content-around vh-100">
+                <div class="judul">
+                    <h1>Hi, Selamat Datang </h1>
+                    <h2></h2>
+                    <div class="bungkusoption">
+                        <h4>Silakan Dipilih</h4>
+                        <select class="form-select pilihpermainan" aria-label="Default select example">
+                            <option selected disabled>Pilih Menu</option>
+                            <option value="tebaktebakan" id="tebaktebakan">TEBAK TEBAKAN</option>
+                            <option value="tebakangka" id="tebakangka">TEBAK ANGKA</option>
+                            <option value="primbonjawa" id="primbonjawa">PRIMBON JAWA</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- <div>
+                <button class="btn btn-danger mx-auto shadow" id="kuiss" >TEBAK TEBAKAN</button>
+                <button class="btn btn-success mx-auto shadow" id="weton">RAMALAN JAWA</button>
+                <button class="btn btn-info mx-auto shadow" id="tebakangka">TEBAK ANGKA</button>
+            </div> -->
+        <footer class="text-center text-lg-start realitve-bottom">
+            <!-- Copyright -->
+            <div class="text-center text-white p-1 puter">
+                © 2021 Copyright:
+                <span class="text-reset fw-bold">DMK CORP</span>
+                <div class="fw-bold">MADE WITH <span class="text-danger"> &#10084;</span></div>
+                <div class="my-1 me-2">
+                    <a href="https://www.facebook.com" target="_blank"><span style="font-size:25px;" class="mx-1 text-white icon"><i class="fab fa-facebook"></i></span></a>
+                    <a href="https://www.instagram.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-instagram"></i></span></a>
+                    <a href="https://www.whatsapp.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-whatsapp"></i></span></a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
 <script>
     //Saat Loading Web
     $(window).on('load',function(){
-        $('.loader').css('display','none');
-        $('.backgroundloader').css('display','none')
+        $('.bungkus-loader-permainan').fadeOut(1000);
+        $('.bungkusemuanya').fadeIn(1000);
     })
 
     let score = 0;

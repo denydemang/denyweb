@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
     <script src="Set-CSS-Keyframes-jQuery/dist/jquery.keyframes.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" id="loading" href="cssku/loading.css">
+    <link rel="stylesheet" id="loading" href="cssku/loader.css">
     <link rel="stylesheet" href="cssku/gametebakangka.css">
     
     <title>Document</title>
 </head>
 <body>
-    <div class="backgroundloader">
-    </div>
-    <div class="loader">
+    <div class="bungkus-loader-tebakangka">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: rgb(134,220,237);border-bottom:2px solid white">
         <div class="container">
@@ -53,12 +56,14 @@
 </body>
 <script src="jsku/tebakangka.js"></script>
 <script>
+    $(window).on('load',function(){
+        $('.bungkus-loader-tebakangka').fadeOut(1000);
+        $('.container').fadeIn(1000);
+    })
     if (!sessionStorage.getItem('tebakangka')){
         document.location.href="permainan.html"
     }
-        $(window).on('load',function(){
-        $('#loading').remove()
-        })
+       
 
         $('.menutama').click(function(){
         document.location.href="permainan.html";
