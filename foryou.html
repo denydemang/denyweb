@@ -25,7 +25,7 @@
             align-items: center;
         }
         .container p{
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
             letter-spacing: 0.1rem;
             text-align: center;
@@ -69,18 +69,56 @@
         .puter {
             color:rgb(33, 29, 33)
         }
-        @media only screen and (orientation:potrait) {
+        
+        @media only screen and (max-width: 600px) {
             body {
+                background-color: rgb(31, 39, 21);
+                font-family: 'Righteous', cursive;
                 height: 100vw;
                 transform: rotate(90deg);
+                
             }
+            *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .container{
+            height: 100vw;
+            width: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container p{
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            overflow: hidden;
+            padding:0.5rem;
+        }
+        .typed-text{
+            font-weight: normal;
+            color:coral;
+        }
+        p {
+            color:white;
+        }
+        footer{
+            width: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
         }
     </style>
 </head>
 <body>
     <div class="container">
         <p>
-            Hai Kamu <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            Hai Fiolla <span class="typed-text"></span><span class="cursor">&nbsp;</span>
         </p>
     </div>
     <footer class="text-center text-lg-start fixed-bottom">
@@ -99,7 +137,7 @@
 </body>
 <script>
     const judul = document.querySelector(".typed-text");
-const textArray = ["SUGENG RAWUH", "WELCOME TO MY WEBSITE","SILAKAN LOGIN DULU KAK"];
+const textArray = ["You're Beautiful","You're Gorgeous","Tetaplah Menjadi Dirimu Yang Ku Kenal", "Jangan Pernah Berubah", "You're My Angel","I Love You"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
