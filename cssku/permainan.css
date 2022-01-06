@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fjalla+One&family=Inter&family=Kalam:wght@700&family=Source+Code+Pro&display=swap');
 
+body {
+    background: linear-gradient(to right, #e13680, #a43ab2);
+}
+
 .avatar {
     color: rgb(10, 229, 236);
     height: 38px;
@@ -26,9 +30,10 @@
     font-size: 56px;
     font-weight: 700;
     line-height: 72px;
-    color: rgb(242, 235, 58);
+    color: rgb(255, 255, 248);
     font-family: "Poppins", sans-serif;
     letter-spacing: .1em;
+    animation: animasi 4s infinite;
     /* text-shadow: 1px 4px 2px rgb(29, 28, 29); */
 }
 
@@ -57,8 +62,38 @@
     color: rgb(248, 240, 240);
 }
 
-body {
-    background: linear-gradient(to right, #e13680, #a43ab2);
+@keyframes animasi {
+    10% {
+        color: rgb(236, 252, 10)
+    }
+
+    15% {
+        color: rgb(8, 255, 66)
+    }
+
+    23% {
+        color: rgb(12, 161, 247)
+    }
+
+    50% {
+        color: rgb(189, 255, 9)
+    }
+
+    75% {
+        color: rgb(228, 118, 15)
+    }
+
+    85% {
+        color: yellow
+    }
+
+    92% {
+        color: rgb(226, 8, 255)
+    }
+
+    100% {
+        color: rgb(249, 13, 33)
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -68,7 +103,6 @@ body {
         display: flex;
         /* outline: 2px solid red; */
         align-items: center;
-        flex-direction: column;
         color: white;
         box-sizing: border-box;
     }
@@ -78,9 +112,10 @@ body {
         font-size: 28px;
         font-weight: 700;
         line-height: 39px;
-        color: rgb(242, 235, 58);
+        color: rgb(248, 248, 246);
         font-family: "Poppins", sans-serif;
         letter-spacing: .1em;
+        animation: animasi 1s infinite;
 
         /* text-shadow: 1px 4px 2px rgb(29, 28, 29); */
     }
@@ -91,7 +126,7 @@ body {
         font-weight: 700;
         line-height: 30px;
         letter-spacing: 4px;
-        color: rgb(10, 229, 236);
+        color: rgb(247, 246, 242);
         font-family: "Poppins", sans-serif;
 
         /* text-shadow: 1px 4px 2px rgb(29, 28, 29); */
@@ -112,6 +147,16 @@ body {
         color: rgb(250, 245, 245);
         font-weight: 700;
         font-family: 'Poppins';
+    }
+
+    .bungkusoption {
+        top: 18%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
     }
 
     .brand {
