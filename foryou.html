@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>COBA TYPING ANIMATION</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous|Courgette&display=swap');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body {
+            background-color: rgb(31, 39, 21);
+            font-family: 'Righteous', cursive;
+        }
+        .container{
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container p{
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            overflow: hidden;
+            padding:0.5rem;
+        }
+        .typed-text{
+            font-weight: normal;
+            color:coral;
+        }
+        p {
+            color:white;
+        }
+        .cursor {
+            display:inline-block;
+            width:3px;
+            background-color: #ccc;
+            margin-left: 0.1rem;
+            animation: blink 1s infinite;
+        }
+        .cursor.typing{
+            animation:none;
+        }
+        @keyframes blink {
+            0%{
+                background-color:#ccc;
+            }
+            49% {
+                background-color:#ccc;
+            }
+            50%{
+                background-color: transparent;
+            }
+            99%{
+                background-color: transparent;
+            }
+            100% {
+                background-color:#ccc;
+            }
+        }
+        .puter {
+            color:rgb(33, 29, 33)
+        }
+        
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: rgb(31, 39, 21);
+                font-family: 'Righteous', cursive;
+                height: 100vw;
+                transform: rotate(90deg);
+                
+            }
+            *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .container{
+            height: 100vw;
+            width: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container p{
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            overflow: hidden;
+            padding:0.5rem;
+        }
+        .typed-text{
+            font-weight: normal;
+            color:coral;
+        }
+        p {
+            color:white;
+        }
+        footer{
+            width: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            Hai Fiolla <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </p>
+    </div>
+    <footer class="text-center text-lg-start fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center text-white p-1 puter">
+            © 2021 Copyright:
+            <span class="text-reset dmk">Deny Kurniawan</span>
+            <div class="">MADE WITH <span class="text-danger"> &#10084;</span></div>
+            <!-- <div class="my-1 me-2">
+                <a href="https://www.facebook.com" target="_blank"><span style="font-size:25px;" class="mx-1 text-white icon"><i class="fab fa-facebook"></i></span></a>
+                <a href="https://www.instagram.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-instagram"></i></span></a>
+                <a href="https://www.whatsapp.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-whatsapp"></i></span></a>
+            </div> -->
+        </div>
+    </footer>
+</body>
+<script>
+    const judul = document.querySelector(".typed-text");
+const textArray = ["You're Beautiful","You're Gorgeous","Tetaplah Menjadi Dirimu Yang Ku Kenal", "Jangan Pernah Berubah", "You're My Angel","I Love You"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000;
+let textArrayIndex = 0;
+let charIndex = 0;
+// let dmk = textArray[textArrayIndex].charAt(0);
+
+// console.log(dmk);
+function type(){
+if(charIndex < textArray[textArrayIndex].length){
+    judul.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+} else{
+    //erase
+    setTimeout(erase, newTextDelay);
+
+}
+}
+function erase(){
+if (charIndex > 0){
+    judul.textContent = textArray[textArrayIndex].substring(0,charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+}else {
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex=0
+    setTimeout(type, typingDelay + 1100);
+}
+}
+document.addEventListener("DOMContentLoaded",function(){
+setTimeout(type, newTextDelay + 250);
+});
+</script>
+</html>

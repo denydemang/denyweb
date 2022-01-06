@@ -34,13 +34,8 @@ function pertanyaan5(){
                             title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                             confirmButtonText:'Bye',
                         }).then(function(){
-                            Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                        }).then(function(){
-                            setTimeout(function(){
-                                sessionStorage.setItem('hpsTombol','true');
-                                sessionStorage.setItem('score',score);
-                                location.reload();
-                            },2000)
+                            sessionStorage.setItem('score',score);
+                            location.reload();
                         })
                     })
                 
@@ -54,13 +49,8 @@ function pertanyaan5(){
                             title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                             confirmButtonText:'Bye',
                         }).then(function(){
-                            Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                        }).then(function(){
-                            setTimeout(function(){
-                                sessionStorage.setItem('hpsTombol','true');
-                                sessionStorage.setItem('score',score);
-                                location.reload();
-                            },2000)
+                            sessionStorage.setItem('score',score);
+                            location.reload();
                         })
                     })
                 } else if (score > 0 && score <= 2){
@@ -73,13 +63,8 @@ function pertanyaan5(){
                             title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                             confirmButtonText:'Bye',
                         }).then(function(){
-                            Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                        }).then(function(){
-                            setTimeout(function(){
-                                sessionStorage.setItem('hpsTombol','true');
-                                sessionStorage.setItem('score',score);
-                                location.reload();
-                            },2000)
+                            sessionStorage.setItem('score',score);
+                            location.reload()
                         })
                     })
                 } else {
@@ -93,13 +78,8 @@ function pertanyaan5(){
                             title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                             confirmButtonText:'Bye',
                         }).then(function(){
-                            Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                        }).then(function(){
-                            setTimeout(function(){
-                                sessionStorage.setItem('hpsTombol','true');
-                                sessionStorage.setItem('score',score);
-                                location.reload();
-                            },2000)
+                            sessionStorage.setItem('score',score);
+                            location.reload();
                         })
                     })
                 }
@@ -126,13 +106,8 @@ function pertanyaan5(){
                                     title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
-                                    Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                                }).then(function(){
-                                    setTimeout(function(){
-                                        sessionStorage.setItem('hpsTombol','true');
-                                        sessionStorage.setItem('score',score);
-                                        location.reload();
-                                    },2000)
+                                    sessionStorage.setItem('score',score);
+                                    location.reload();
                                 })
                             })
                         }else if ( score > 2 && score < 5){
@@ -145,13 +120,8 @@ function pertanyaan5(){
                                     title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
-                                    Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                                }).then(function(){
-                                    setTimeout(function(){
-                                        sessionStorage.setItem('hpsTombol','true');
-                                        sessionStorage.setItem('score',score);
-                                        location.reload();
-                                    },2000)
+                                    sessionStorage.setItem('score',score);
+                                    location.reload();
                                 })
                             })
                         } else if (score > 0 && score <= 2){
@@ -164,13 +134,8 @@ function pertanyaan5(){
                                     title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
-                                    Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                                }).then(function(){
-                                    setTimeout(function(){
-                                        sessionStorage.setItem('hpsTombol','true');
-                                        sessionStorage.setItem('score',score);
-                                        location.reload();
-                                    },2000)
+                                    sessionStorage.setItem('score',score);
+                                    location.reload();
                                 })
                             })
                         } else {
@@ -184,15 +149,8 @@ function pertanyaan5(){
                                     title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
-                                    Swal.fire('Sesi Game Tebak Tebakkan Telah Selesai','','info');
-                                }).then(function(){
-                                    setTimeout(function(){
-                                        sessionStorage.setItem('hpsTombol','true');
-                                        sessionStorage.setItem('score',score);
-                                        location.reload();
-                                    },1900)
-                                    
-                                    
+                                    sessionStorage.setItem('score',score);
+                                    location.reload();
                                 })
                             })
                         } 

@@ -122,7 +122,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'PEGAT '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "PEGAT", Menurut Primbon Jawa, Pasangan dengan Kategori "PEGAT" akan ada banyak masalah yang menerpa rumah tangga-nya mulai dari masalah ekonomi, kekuasaan, perselingkuhan yang bisa menyebabkan bercerai atau pegatan.'
+            text : 'Kamu dan Si Doi masuk kategori "PEGAT". Menurut Primbon Jawa, pasangan dengan kategori "PEGAT" akan ada banyak masalah yang menerpa rumah tangga-nya mulai dari masalah ekonomi, kekuasaan, perselingkuhan yang bisa menyebabkan bercerai atau pegatan.'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -131,10 +131,8 @@ function hasilramalan(x){
             }).then(function(){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
-                sessionStorage.setItem('hpsTombol1','true');
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
                 
                 
@@ -145,7 +143,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'RATU '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Ratu", Menurut Primbon Jawa, Pasangan dengan Kategori "Ratu" ini bisa dibilang pasangan yang memang sudah jodohnya. Dihargai dan disegani oleh tetangga dan lingkungan sekitar. Saking harmonisnya, bahkan banyak orang yang iri akan keharmonisannya dalam membina rumah tangga.'
+            text : 'Kamu dan Si Doi masuk kategori "Ratu". Menurut Primbon Jawa, pasangan dengan kategori "Ratu" ini bisa dibilang pasangan yang memang sudah jodohnya. Dihargai dan disegani oleh tetangga dan lingkungan sekitar. Saking harmonisnya, bahkan banyak orang yang iri akan keharmonisannya dalam membina rumah tangga.'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -155,8 +153,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
 
             })
@@ -165,7 +162,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'JODOH '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Jodoh", Menurut Primbon Jawa,Pasangan dengan Kategori "Jodoh" , sesuai dengan namanya pasangan tersebut memang beneran cocok dan berjodoh. Pasangan ini bisa saling menerima segala kelebihan dan kekurangan masing-masing. Rumah tangga pasangan "Jodoh" ini bisa rukun sampai tua.'
+            text : 'Kamu dan Si Doi masuk kategori "Jodoh". Menurut Primbon Jawa, pasangan dengan kategori "Jodoh" , sesuai dengan namanya pasangan tersebut memang beneran cocok dan berjodoh. Pasangan ini bisa saling menerima segala kelebihan dan kekurangan masing-masing. Rumah tangga pasangan "Jodoh" ini bisa rukun sampai tua.'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -175,8 +172,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
 
             })
@@ -185,7 +181,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'TOPO '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Topo", Menurut Primbon Jawa,Pasangan dengan Kategori "Topo", dalam membina rumah tangga akan sering mengalami kesusahan di awal musim karena masih saling memahami tapi akan bahagia pada akhirnya. Masalah yang dihadapi bisa saja soal ekonomi dan lainnya. Nah, saat sudah memiliki anak dan cukup lama berumah tangga, akhirnya mereka akan hidup sukses dan bahagia.'
+            text : 'Kamu dan Si Doi masuk kategori "Topo". Menurut Primbon Jawa, pasangan dengan kategori "Topo", dalam membina rumah tangga akan sering mengalami kesusahan di awal musim karena masih saling memahami tapi akan bahagia pada akhirnya. Masalah yang dihadapi bisa saja soal ekonomi dan lainnya. Nah, saat sudah memiliki anak dan cukup lama berumah tangga, akhirnya mereka akan hidup sukses dan bahagia.'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -195,8 +191,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
             })
         })
@@ -204,7 +199,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'TINARI '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Tinari", Menurut Primbon Jawa,Pasangan dengan Kategori "Tinari" akan menemukan kebahagiaan. Dalam mencari rezeki diberikan kemudahan dan nggak sampai hidup kekurangan. Selain itu, hidupnya juga sering mendapat keberuntungan.'
+            text : 'Kamu dan Si Doi masuk kategori "Tinari". Menurut Primbon Jawa, pasangan dengan kategori "Tinari" akan menemukan kebahagiaan. Dalam mencari rezeki diberikan kemudahan dan nggak sampai hidup kekurangan. Selain itu, hidupnya juga sering mendapat keberuntungan.'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -214,8 +209,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
             })
         })
@@ -223,7 +217,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'PADU '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Padu", Menurut Primbon Jawa,Pasangan dengan Kategori "Padu", dalam berumah tangga, keduanya akan sering mengalami pertengkaran. Tapi meskipun sering bertengkar, keduanya nggak sampai cerai. Masalah pertengkaran tersebut bahkan bisa dipicu dari hal-hal yang sifatnya cukup sepele'
+            text : 'Kamu dan Si Doi masuk kategori "Padu". Menurut Primbon Jawa, pasangan dengan Kategori "Padu", dalam berumah tangga, keduanya akan sering mengalami pertengkaran. Tapi meskipun sering bertengkar, keduanya nggak sampai cerai. Masalah pertengkaran tersebut bahkan bisa dipicu dari hal-hal yang sifatnya cukup sepele'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -233,9 +227,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
             })
         })
@@ -243,7 +235,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'SUJANAN '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Sujanan", Menurut Primbon Jawa,Pasangan dengan Kategori "Sujanan", dalam berumah tangga keduanya akan sering mengalami pertengkaran dan masalah perselingkuhan. Bisa itu dari pihak laki-laki maupun perempuan yang memulai perselingkuhan tersebut.'
+            text : 'Kamu dan Si Doi masuk kategori "Sujanan". Menurut Primbon Jawa, pasangan dengan Kategori "Sujanan", dalam berumah tangga keduanya akan sering mengalami pertengkaran dan masalah perselingkuhan. Bisa itu dari pihak laki-laki maupun perempuan yang memulai perselingkuhan tersebut.'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -253,8 +245,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
             })
         })
@@ -262,7 +253,7 @@ function hasilramalan(x){
         Swal.fire({
             icon: 'info',
             title: 'PESTHI '+'(Jumlah Neptu '+x+')',
-            text : 'Kamu dan Si Doi masuk kategori "Pesthi", Menurut Primbon Jawa,Pasangan dengan Kategori "Pesthi", dalam berumah tangga akan rukun, tenteram, adem ayem sampai tua. Meskipun ada masalah apa pun tidak akan sampai merusak keharmonisan keluarga'
+            text : 'Kamu dan Si Doi masuk kategori "Pesthi". Menurut Primbon Jawa, pasangan dengan Kategori "Pesthi", dalam berumah tangga akan rukun, tenteram, adem ayem sampai tua. Meskipun ada masalah apa pun tidak akan sampai merusak keharmonisan keluarga'
         }).then(function(){
             Swal.fire({
                 icon:'warning',
@@ -272,8 +263,7 @@ function hasilramalan(x){
                 sessionStorage.setItem('tglkamu',$('#datetimepicker1').val());
                 sessionStorage.setItem('tgldoi',$('#datetimepicker2').val());
                 sessionStorage.setItem('udahMain','true');
-                sessionStorage.setItem('hpsTombol1','true');
-                sessionStorage.setItem('sudahmainweton','true');
+                sessionStorage.setItem('SudahMainWeton','true');
                 location.reload();
                 
             })

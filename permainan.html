@@ -8,10 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
-    <link rel="stylesheet" href="cssku/loading.css">
     <link rel="stylesheet" href="cssku/permainan.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="cssku/loader.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="cssku/loader.css"> -->
     <title>DemangCorp</title>
     <script>
     var login = sessionStorage.getItem('login');
@@ -26,56 +29,78 @@
     </style>
 </head>
 <body>
+    
     <!-- element Saat Web Loading -->
-    <div class="backgroundloader">  
-    </div>
-    <div class="loader">
+    <div class="bungkus-loader-permainan">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <!-- end element saat web loading -->
-    <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: linear-gradient(to right ,#e13680, #a43ab2);border-bottom:2px solid white">
-        <div class="container">
-            <a href="#" class="navbar-brand brand">Demang Corp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <div class="avatar"></div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="keluar"><button class="btn fw-bold" style="background-color: chartreuse;color:white;">Keluar</button></div>
-                    </li>
-                </ul>
+    <div class="bungkusemuanya">
+        <nav class="navbar navbar-dark navbar-expand-lg relative-top shadow" style="background: linear-gradient(to right ,#e13680, #a43ab2);border-bottom:2px solid white">
+            <div class="container">
+                <a href="#" class="navbar-brand brand">Demang Corp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <div class="avatar"></div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="keluar"><button class="btn fw-bold" style="background-color: chartreuse;color:white;">Keluar</button></div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div>
-            <button class="btn btn-danger mx-auto shadow" id="kuiss" >TEBAK TEBAKAN</button>
-            <button class="btn btn-success mx-auto shadow" id="weton">RAMALAN JAWA</button>
-        </div>
+        </nav>
+            
+            <section class="container d-flex justify-content-around vh-100">
+                <div class="judul">
+                    <h1>Hi, Selamat Datang </h1>
+                    <h2></h2>
+                    <div class="bungkusoption">
+                        <h4>Silakan Dipilih</h4>
+                        <select class="form-select pilihpermainan" aria-label="Default select example">
+                            <option selected disabled>Pilih Menu</option>
+                            <option value="tebaktebakan" id="tebaktebakan">TEBAK TEBAKAN</option>
+                            <option value="tebakangka" id="tebakangka">TEBAK ANGKA</option>
+                            <option value="primbonjawa" id="primbonjawa">PRIMBON JAWA</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- <div>
+                <button class="btn btn-danger mx-auto shadow" id="kuiss" >TEBAK TEBAKAN</button>
+                <button class="btn btn-success mx-auto shadow" id="weton">RAMALAN JAWA</button>
+                <button class="btn btn-info mx-auto shadow" id="tebakangka">TEBAK ANGKA</button>
+            </div> -->
+        <footer class="text-center text-lg-start realitve-bottom">
+            <!-- Copyright -->
+            <div class="text-center text-white p-1 puter">
+                © 2021 Copyright:
+                <span class="text-reset fw-bold">DMK CORP</span>
+                <div class="fw-bold">MADE WITH <span class="text-danger"> &#10084;</span></div>
+                <div class="my-1 me-2">
+                    <a href="https://www.facebook.com" target="_blank"><span style="font-size:25px;" class="mx-1 text-white icon"><i class="fab fa-facebook"></i></span></a>
+                    <a href="https://www.instagram.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-instagram"></i></span></a>
+                    <a href="https://www.whatsapp.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-whatsapp"></i></span></a>
+                </div>
+            </div>
+        </footer>
     </div>
-    <footer class="text-center text-lg-start realitve-bottom">
-        <!-- Copyright -->
-        <div class="text-center text-white p-1 puter">
-            © 2021 Copyright:
-            <span class="text-reset fw-bold">DMK CORP</span>
-            <div class="fw-bold">MADE WITH <span class="text-danger"> &#10084;</span></div>
-            <div class="my-1 me-2">
-                <a href="https://www.facebook.com" target="_blank"><span style="font-size:25px;" class="mx-1 text-white icon"><i class="fab fa-facebook"></i></span></a>
-                <a href="https://www.instagram.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-instagram"></i></span></a>
-                <a href="https://www.whatsapp.com" target="_blank"><span style="font-size:25px;" class="mx-1 my-3 text-white icon"><i class="fab fa-whatsapp"></i></span></a>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
 <script>
     //Saat Loading Web
     $(window).on('load',function(){
-        $('.loader').css('display','none');
-        $('.backgroundloader').css('display','none')
+        $('.bungkus-loader-permainan').fadeOut(1000);
+        $('.bungkusemuanya').fadeIn(1000);
     })
 
     let score = 0;
@@ -83,43 +108,81 @@
     let namadepan = sessionStorage.getItem('firstname');
     let namabelakang =sessionStorage.getItem('lastname');
     const nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
-    if ((sessionStorage.getItem('hpsTombol'))== 'true'){ 
-            $('#kuiss').hide();
-    }
-    if ((sessionStorage.getItem('hpsTombol1'))== 'true'){
-            $('#weton').hide();
-            
-    }
-    if ((sessionStorage.getItem('sudahmainweton'))=='true'){
-        Swal.fire({
-            icon: 'warning',
-            title: 'Session Ramalan Primbon Weton Telah Berakhir',
 
-        }).then(function(){
-            sessionStorage.removeItem('sudahmainweton')
-        })
+    if ((sessionStorage.getItem('disabledTebakAngka'))== 'true') {
+        $('#tebakangka').prop('disabled',true);
     }
-    if ((sessionStorage.getItem('hpsTombol1'))== 'true' && (sessionStorage.getItem('hpsTombol'))== 'true' ){
+    if ((sessionStorage.getItem('disabledTebakan'))== 'true') {
+        $('#tebaktebakan').prop('disabled',true);
+    }
+    if ((sessionStorage.getItem('disabledWeton'))== 'true'){
+        $('#primbonjawa').prop('disabled',true);
+    }
+    if ((sessionStorage.getItem('disabledWeton'))== 'true' && (sessionStorage.getItem('disabledTebakAngka'))== 'true' && (sessionStorage.getItem('disabledTebakan'))== 'true' ){
         Swal.fire({
             icon: 'warning',
             title: 'Semua Game Telah Dimainkan! Silakan Kamu Boleh Log Out',
             text: 'Tombol Log Out Di Bagian Pojok Kanan Atas'
         })
     }
-    $('#weton').click(function(){
-        sessionStorage.setItem('weton','true');
-        document.location.href="weton.html"
-    })
+    else if ((sessionStorage.getItem('SudahMainWeton'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Ramalan Primbon Weton Telah Berakhir',
+
+        }).then(function(){
+            sessionStorage.setItem('disabledWeton','true');
+            // $('#primbonjawa').prop('disabled',true);
+            sessionStorage.removeItem('SudahMainWeton');
+            location.reload()
+        });
+    }
+    else if ((sessionStorage.getItem('SudahMainTebakAngka'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Main Tebak Angka Sudah Selesai',
+        }).then(function(){
+            sessionStorage.setItem('disabledTebakAngka','true');
+            // $('#tebakangka').prop('disabled',true);
+            sessionStorage.removeItem('SudahMainTebakAngka');
+            location.reload()
+        })
+    }
+    else if ((sessionStorage.getItem('udahMainTebakan'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Main Tebak Tebakan Sudah Selesai',
+        }).then(function(){
+            sessionStorage.setItem('disabledTebakan','true');
+            // $('#tebakangka').prop('disabled',true);
+            sessionStorage.removeItem('udahMainTebakan');
+            location.reload()
+        })
+    }
+    
+    
     $(document).ready(function(){
         var namadepan = sessionStorage.getItem('firstname');
         var namabelakang = sessionStorage.getItem('lastname');
         var namadepan = namadepan[0].toUpperCase() + namadepan.substring(1);
         var namabelakang = namabelakang[0].toUpperCase() + namabelakang.substring(1);
-        $('.avatar').html('<i class="fas fa-user me-1"></i>'+'Hi, '+namadepan+' '+namabelakang)
-    })
-    $('#kuiss').click(function(){
-        score = 0;
-        sambutanpertanyaan();
+        $('.avatar').html('<i class="fas fa-user me-1"></i>'+' '+namadepan+' '+namabelakang);
+        $('.judul h2').html(namadepan+' '+namabelakang);
+        $('.pilihpermainan').on('change',function(){
+            var val = $(this).val();
+            if (val == 'tebaktebakan') {
+                score = 0;
+                sambutanpertanyaan();
+            }
+            else if (val =='primbonjawa') {
+                sessionStorage.setItem('weton','true');
+                document.location.href="weton.html"
+            }
+            else if (val == 'tebakangka') {
+                sessionStorage.setItem('tebakangka','true');
+                document.location.href="gametebakangka.html"
+            }
+        })
     })
 </script>
 <script src="jsku/logout.js"></script>

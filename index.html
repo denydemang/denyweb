@@ -10,24 +10,32 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-    <link rel="stylesheet" href="cssku/loading.css">
+    <link rel="stylesheet" href="cssku/loader.css">
     <link rel="stylesheet" href="cssku/index.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script>
         if ((sessionStorage.getItem('login'))=='true'){
             document.location.href="permainan.html"
         }
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300');
     
+    </style>
 </head>
 <body> 
+   
     <!-- Loader -->
-    <div class="backgroundloader">
-    </div>
-    <div class="loader">
+    <div class="bungkus-loader-index">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     
     <div class="container">
-        
         <!-- Modal Form Feedback -->
         <div class="modal fade" id="Feedback" tabindex="-1" aria-labelledby="FeedbackModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -40,8 +48,8 @@
                         <form id="myform2" name="feedback" action="">   
                             <label for="customRange1" class="form-label">Nilai</label><br>
                             <input type="range" class="form-range" id="rate" name="rate" min="0" max="5" step="0.05">
-                            <div id="keteranganrate" style="color:rgb(39, 156, 88); margin-top: -2px; margin-bottom: 2px;"></div>
-                            <div class="form-floating">
+                            <div id="keteranganrate" style="margin-top: -2px; margin-bottom: 2px;"></div>
+                            <div class="form-floating mt-3">
                                 <textarea class="form-control" id="komentar" name="komentar" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px" ></textarea>
                                 <label for="floatingTextarea2">Komentar</label>
                             </div>
@@ -49,6 +57,7 @@
                             <input type="hidden" name="nama" id="nama">
                             <input type="hidden" name="tgluser" id="tgluser">
                             <input type="hidden" name="tgldoi" id="tgldoi">
+                            <input type="hidden" name="score" id="score">
                             <span style="display:inline-block;margin-top: 2px;"><i style="color:red">Saat Mengirim Feedback Mungkin Memerlukan Waktu Beberapa Detik, Jgn Reload Halaman Sebelum Muncul Notif </i></span>
                     </div>
                     <div class="modal-footer">
@@ -62,20 +71,24 @@
 
         <div class="row d-flex align-items-center justify-content-center vh-100">
             <div class="card formlogin p-0 shadow-lg rounded-5">
-                <div class="card-header card-head">
-                    <h2 class="card-title text-center headerlogin"></h2>
+                <div class="card-header card-head">  
                 </div>
-                <div class="card-body" style="background-color: rgb(136, 214, 224);">
+                <div class="bungkusjudul">
+                    <p>
+                        <span class="judul"></span><span class="cursor">&nbsp;</span>
+                    </p>    
+                </div>
+                <div class="card-body" style="background-color:rgb(190,201,216)">
                     <form id="myform" action="">
                         <div class="mb-3">
-                            <label for="" class="form-label fw-bolder" style="color:rgb(54, 77, 104)"> Nama Depan</label>
+                            <label for="" class="form-label fw-bolder" style="color:rgb(18, 41, 66)"> Nama Depan</label>
                             <input type="text" id="namadepan" class="namadepan form-control" placeholder="Masukkan Nama Depanmu" autocomplete="off">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label fw-bolder" style="color:rgb(54, 77, 104)" > Nama Belakang</label>
                             <input type="text" id="namabelakang" class="namabelakang form-control" placeholder="Masukkan Nama Belakangmu" autocomplete="off">
                         </div>
-                        <input type="button" class="submit btn btn-primary float-end my-3 w-100" value="Masuk">
+                        <input type="button" class="submit tombolmasuk btn my-3 w-100" value="Masuk">
                     </form>
                 </div>
             </div>    
@@ -86,11 +99,12 @@
     
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="jsku/typinganimation.js"></script>
 <script>
     //Saat Loading Web
     $(window).on('load',function(){
-        $('.loader').css('display','none');
-        $('.backgroundloader').css('display','none')
+        $('.bungkus-loader-index').fadeOut(1000);
+        $('.container').fadeIn(1000);
     })
     //Waktu Akses User Utk DiCatat Di Spreadsheet
     $(document).ready(function(){

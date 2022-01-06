@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+/* html {
+    font-size: 35px;
+    
+} */
+body {
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    /* background-position: top; */
+    background-image: url(../img/4144946.jpg);
+}
+
+.swal-wide {
+    width: 400px;
+}
+
+.judul {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 40px;
+    color: blueviolet
+}
+
+.subjudul {
+    margin-top: -10px;
+    font-size: 25px;
+    color: rgb(49, 52, 235);
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border:2px solid red; */
+}
+
+#input {
+    font-size: 1.9rem;
+    text-align: center;
+    width: 20%;
+    height: 40px;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    /* color: red; */
+}
+
+div textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.content {
+    font-family: 'Roboto';
+    background-color: #a3e6fa;
+    width: 380px;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 999;
+
+}
+
+.huruf {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: rgb(223, 103, 169);
+    position: relative;
+
+}
+
+.tombol {
+
+    font-size: 1.1rem;
+    background-color: rgb(188, 167, 245);
+    padding: 8px;
+    font-family: sans-serif;
+    color: rgb(244, 251, 253);
+    font-weight: bold;
+}
+
+.tombol1 {
+    font-size: 1.1rem;
+    background-color: rgb(235, 184, 17);
+    padding: 8px;
+    font-family: sans-serif;
+    color: rgb(244, 251, 253);
+    font-weight: bold;
+}
+
+.keterangan {
+    padding-top: 8px;
+    font-size: 17px;
+    font-weight: bolder;
+    animation: muncul .3s;
+    color: rgb(255, 0, 0);
+
+
+}
+
+.keteranganbungkus {
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+.kesempatan {
+    position: absolute;
+    font-size: .9rem;
+    top: 2%;
+    right: 5%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(224, 18, 156)
+}
+
+@keyframes muncul {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
