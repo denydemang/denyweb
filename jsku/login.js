@@ -9,16 +9,16 @@ let datauser = [
         namabelakang: "fajar"
     },
     {   namadepan : "ridwan",
-        namabelakang: "nugroho"
+        namabelakang: "adi nugroho"
     },
     {   namadepan : "isti",
         namabelakang: "ista"
     },
     {   namadepan : "dimas",
-        namabelakang: "cuy",
+        namabelakang: "feri cuy",
     },
     {   namadepan : "rizal",
-        namabelakang: "nugroho",
+        namabelakang: "adi nugroho",
     },
     {   namadepan : "dedy",
         namabelakang: "suprayogi",
@@ -40,6 +40,12 @@ let datauser = [
     },
     {   namadepan : "hasta",
         namabelakang: "prasetya",
+    },
+    {   namadepan : "muhammad",
+        namabelakang: "salahudin",
+    },
+    {   namadepan : "krisnadi",
+        namabelakang: "",
     },
 ]
 $(document).ready(function(){
