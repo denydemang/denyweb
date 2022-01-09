@@ -52,7 +52,16 @@
                             <div class="avatar"></div>
                         </li>
                         <li class="nav-item">
-                            <div class="keluar"><button class="btn fw-bold" style="background-color: chartreuse;color:white;">Keluar</button></div>
+                            <div class="keluar">
+                                <form action="" name="permainan">
+                                    <input type="hidden" name="waktuakses" id="waktuakses">
+                                    <input type="hidden" name="nama" id="nama">
+                                    <input type="hidden" name="tgluser" id="tgluser">
+                                    <input type="hidden" name="tgldoi" id="tgldoi">
+                                    <input type="hidden" name="score" id="score">
+                                    <button class="btn fw-bold" type="submit" style="background-color: chartreuse;color:white;">Keluar</button>
+                                </form>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -102,7 +111,27 @@
         $('.bungkus-loader-permainan').fadeOut(1000);
         $('.bungkusemuanya').fadeIn(1000);
     })
+    $(document).ready(function () {
 
+    var namauser = sessionStorage.getItem('firstname');
+        $("#nama").val(namauser);
+    var tgluser= sessionStorage.getItem('tglkamu');
+        $('#tgluser').val(tgluser)
+    var tgldoi = sessionStorage.getItem('tgldoi');
+        $('#tgldoi').val(tgldoi);
+    var score = sessionStorage.getItem('score');
+        $('#score').val(score);
+    var currentdate = new Date(); 
+    var datetime = "Diakses Pada " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        $('#waktuakses').val(datetime);
+    
+
+});
     let score = 0;
     let totalpertanyaan = 5;
     let namadepan = sessionStorage.getItem('firstname');
