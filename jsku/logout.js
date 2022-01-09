@@ -27,6 +27,12 @@ const form = document.forms['permainan']
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => console.log('success') )
         .catch(error => Swal.fire('Feedback Gagal Dikirim !' +error.message,'','warning').then(function(){sessionStorage.clear(); location.reload();}))
-
-        document.location.href="index.html";  
+        Swal.fire ({
+            title: 'Thank You',
+            timer: 1500
+        })
+        setTimeout(function(){
+            document.location.href="index.html";  
+        },1500)
+        
     })
