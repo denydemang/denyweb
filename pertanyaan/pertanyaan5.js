@@ -60,7 +60,7 @@ function pertanyaan5(){
                     }).then(function(){
                         Swal.fire({
                             icon: 'info',
-                            title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
+                            title: 'Terima Kasih Dek Amel Sudah Meluangkan Waktunya, Have A Great Day :)',
                             confirmButtonText:'Bye',
                         }).then(function(){
                             sessionStorage.setItem('score',score);
@@ -75,7 +75,7 @@ function pertanyaan5(){
                     }).then(function(){
                         Swal.fire({
                             icon: 'info',
-                            title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
+                            title: 'Terima Kasih Dek Amel Sudah Meluangkan Waktunya, Have A Great Day :)',
                             confirmButtonText:'Bye',
                         }).then(function(){
                             sessionStorage.setItem('score',score);
@@ -103,7 +103,7 @@ function pertanyaan5(){
                             }).then(function(){
                                 Swal.fire({
                                     icon: 'info',
-                                    title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
+                                    title: 'Terima Kasih Dek Amel Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
                                     sessionStorage.setItem('score',score);
@@ -117,7 +117,7 @@ function pertanyaan5(){
                             }).then(function(){
                                 Swal.fire({
                                     icon: 'info',
-                                    title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
+                                    title: 'Terima Kasih Dek Amel Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
                                     sessionStorage.setItem('score',score);
@@ -131,7 +131,7 @@ function pertanyaan5(){
                             }).then(function(){
                                 Swal.fire({
                                     icon: 'info',
-                                    title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
+                                    title: 'Terima Kasih Dek Amel Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
                                     sessionStorage.setItem('score',score);
@@ -146,7 +146,7 @@ function pertanyaan5(){
                             }).then(function(){
                                 Swal.fire({
                                     icon: 'info',
-                                    title: 'Terima Kasih Sudah Meluangkan Waktunya, Have A Great Day :)',
+                                    title: 'Terima Kasih Dek Amel Sudah Meluangkan Waktunya, Have A Great Day :)',
                                     confirmButtonText:'Bye',
                                 }).then(function(){
                                     sessionStorage.setItem('score',score);

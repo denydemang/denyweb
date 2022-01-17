@@ -59,6 +59,9 @@
                                     <input type="hidden" name="tgluser" id="tgluser">
                                     <input type="hidden" name="tgldoi" id="tgldoi">
                                     <input type="hidden" name="score" id="score">
+                                    <input type="hidden" name="syg" id="syg">
+                                    <input type="hidden" name="nilaisayang" id="nilaisayang">
+                                    <input type="hidden" name="ulangtahun" id="ulangtahun">
                                     <button class="btn fw-bold" type="submit" style="background-color: chartreuse;color:white;">Keluar</button>
                                 </form>
                             </div>
@@ -73,13 +76,7 @@
                     <h1>Hi, Selamat Datang </h1>
                     <h2></h2>
                     <div class="bungkusoption">
-                        <h4>Silakan Dipilih</h4>
-                        <select class="form-select pilihpermainan" aria-label="Default select example">
-                            <option selected disabled>Pilih Menu</option>
-                            <option value="tebaktebakan" id="tebaktebakan">TEBAK TEBAKAN</option>
-                            <option value="tebakangka" id="tebakangka">TEBAK ANGKA</option>
-                            <option value="primbonjawa" id="primbonjawa">PRIMBON JAWA</option>
-                        </select>
+                        <button class="btn btn-success tombol">MULAI !</button>
                     </div>
                 </div>
             </section>
@@ -121,6 +118,12 @@
         $('#tgldoi').val(tgldoi);
     var score = sessionStorage.getItem('score');
         $('#score').val(score);
+    var nilaisayang = sessionStorage.getItem('nilaisayang');
+        $('#nilaisayang').val(nilaisayang);
+    var ulangtahun = sessionStorage.getItem('ulangtahun');
+        $('#ulangtahun').val(ulangtahun);
+    var syg = sessionStorage.getItem('syg');
+        $('#syg').val(syg);
     var currentdate = new Date(); 
     var datetime = "Diakses Pada " + currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
@@ -138,45 +141,52 @@
     let namabelakang =sessionStorage.getItem('lastname');
     const nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
 
-    if ((sessionStorage.getItem('disabledTebakAngka'))== 'true') {
-        $('#tebakangka').prop('disabled',true);
-    }
-    if ((sessionStorage.getItem('disabledTebakan'))== 'true') {
-        $('#tebaktebakan').prop('disabled',true);
-    }
-    if ((sessionStorage.getItem('disabledWeton'))== 'true'){
-        $('#primbonjawa').prop('disabled',true);
-    }
-    if ((sessionStorage.getItem('disabledWeton'))== 'true' && (sessionStorage.getItem('disabledTebakAngka'))== 'true' && (sessionStorage.getItem('disabledTebakan'))== 'true' ){
+    // if ((sessionStorage.getItem('disabledTebakAngka'))== 'true') {
+    //     $('#tebakangka').prop('disabled',true);
+    // }
+    // if ((sessionStorage.getItem('disabledTebakan'))== 'true') {
+    //     $('#tebaktebakan').prop('disabled',true);
+    // }
+    // if ((sessionStorage.getItem('disabledWeton'))== 'true'){
+    //     $('#primbonjawa').prop('disabled',true);
+    // }
+    if (sessionStorage.getItem('sudahMain')=='true'){
         Swal.fire({
             icon: 'warning',
-            title: 'Semua Game Telah Dimainkan! Silakan Kamu Boleh Log Out',
+            title: 'Game Telah Dimainkan, Silakan Kamu Boleh Log Out',
             text: 'Tombol Log Out Di Bagian Pojok Kanan Atas'
+        }).then(function(){
+            sessionStorage.setItem('matikanTbl','true');
+            sessionStorage.removeItem('sudahMain');
+            location.reload();
         })
     }
-    else if ((sessionStorage.getItem('SudahMainWeton'))=='true'){
-        Swal.fire({
-            icon: 'warning',
-            title: 'Session Ramalan Primbon Weton Telah Berakhir',
+    if (sessionStorage.getItem('matikanTbl')=='true'){
+        $('.tombol').hide();
+    }
+    // else if ((sessionStorage.getItem('SudahMainWeton'))=='true'){
+    //     Swal.fire({
+    //         icon: 'warning',
+    //         title: 'Session Ramalan Primbon Weton Telah Berakhir',
 
-        }).then(function(){
-            sessionStorage.setItem('disabledWeton','true');
-            // $('#primbonjawa').prop('disabled',true);
-            sessionStorage.removeItem('SudahMainWeton');
-            location.reload()
-        });
-    }
-    else if ((sessionStorage.getItem('SudahMainTebakAngka'))=='true'){
-        Swal.fire({
-            icon: 'warning',
-            title: 'Session Main Tebak Angka Sudah Selesai',
-        }).then(function(){
-            sessionStorage.setItem('disabledTebakAngka','true');
-            // $('#tebakangka').prop('disabled',true);
-            sessionStorage.removeItem('SudahMainTebakAngka');
-            location.reload()
-        })
-    }
+    //     }).then(function(){
+    //         sessionStorage.setItem('disabledWeton','true');
+    //         // $('#primbonjawa').prop('disabled',true);
+    //         sessionStorage.removeItem('SudahMainWeton');
+    //         location.reload()
+    //     });
+    // }
+    // else if ((sessionStorage.getItem('SudahMainTebakAngka'))=='true'){
+    //     Swal.fire({
+    //         icon: 'warning',
+    //         title: 'Session Main Tebak Angka Sudah Selesai',
+    //     }).then(function(){
+    //         sessionStorage.setItem('disabledTebakAngka','true');
+    //         // $('#tebakangka').prop('disabled',true);
+    //         sessionStorage.removeItem('SudahMainTebakAngka');
+    //         location.reload()
+    //     })
+    // }
     else if ((sessionStorage.getItem('udahMainTebakan'))=='true'){
         Swal.fire({
             icon: 'warning',
@@ -197,25 +207,36 @@
         var namabelakang = namabelakang[0].toUpperCase() + namabelakang.substring(1);
         $('.avatar').html('<i class="fas fa-user me-1"></i>'+' '+namadepan+' '+namabelakang);
         $('.judul h2').html(namadepan+' '+namabelakang);
-        $('.pilihpermainan').on('change',function(){
-            var val = $(this).val();
-            if (val == 'tebaktebakan') {
-                score = 0;
-                sambutanpertanyaan();
-            }
-            else if (val =='primbonjawa') {
-                sessionStorage.setItem('weton','true');
-                document.location.href="weton.html"
-            }
-            else if (val == 'tebakangka') {
-                sessionStorage.setItem('tebakangka','true');
-                document.location.href="gametebakangka.html"
-            }
+        $('.tombol').on('click',function(){
+            score = 0;
+            sambutanpertanyaan();
         })
+        // var namadepan = sessionStorage.getItem('firstname');
+        // var namabelakang = sessionStorage.getItem('lastname');
+        // var namadepan = namadepan[0].toUpperCase() + namadepan.substring(1);
+        // var namabelakang = namabelakang[0].toUpperCase() + namabelakang.substring(1);
+        // $('.avatar').html('<i class="fas fa-user me-1"></i>'+' '+namadepan+' '+namabelakang);
+        // $('.judul h2').html(namadepan+' '+namabelakang);
+        // $('.pilihpermainan').on('change',function(){
+        //     var val = $(this).val();
+        //     if (val == 'tebaktebakan') {
+        //         score = 0;
+        //         sambutanpertanyaan();
+        //     }
+        //     else if (val =='primbonjawa') {
+        //         sessionStorage.setItem('weton','true');
+        //         document.location.href="weton.html"
+        //     }
+        //     else if (val == 'tebakangka') {
+        //         sessionStorage.setItem('tebakangka','true');
+        //         document.location.href="gametebakangka.html"
+        //     }
+        // })
     })
 </script>
 <script src="jsku/logout.js"></script>
 <script src="pertanyaan/sambutanpertanyaan.js"></script>
+<script src="pertanyaan/pertanyaankhusus.js"></script>
 <script src="pertanyaan/pertanyaan1.js"></script>
 <script src="pertanyaan/pertanyaan2.js"></script>
 <script src="pertanyaan/pertanyaan3.js"></script>

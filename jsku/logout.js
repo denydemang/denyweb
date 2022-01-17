@@ -16,6 +16,7 @@ const form = document.forms['permainan']
     form.addEventListener('submit', e => {
     e.preventDefault()
     sessionStorage.removeItem('login');
+    sessionStorage.removeItem('matikanTbl');
     sessionStorage.removeItem('disabledTebakan');
     sessionStorage.removeItem('disabledTebakAngka');
     sessionStorage.removeItem('disabledWeton');
@@ -29,6 +30,7 @@ const form = document.forms['permainan']
         .catch(error => Swal.fire('Feedback Gagal Dikirim !' +error.message,'','warning').then(function(){sessionStorage.clear(); location.reload();}))
         Swal.fire ({
             title: 'Thank You',
+            showConfirmButton: false,
             timer: 1500
         })
         setTimeout(function(){

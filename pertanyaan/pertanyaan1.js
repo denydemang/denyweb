@@ -1,5 +1,7 @@
 function pertanyaan1(){
     //pertanyaan ke-1
+    sessionStorage.setItem('sudahMain','true');
+    sessionStorage.setItem('udahMain','true') ;
     Swal.fire({
         icon: 'question',
         title: 'Jika ada 10 pejuang Indonesia yang berperang, lalu ada satu orang yang gugur, ada berapa orang yang akan kembali ke markas?',
@@ -38,7 +40,7 @@ function pertanyaan1(){
         }else if (result.isDenied){
             //Gagal Jawab Pertanyaan ke-1
             Swal.fire({
-                title: 'Yah Cemen Belum Apa-Apa Nyerah :D'
+                title: 'WKWKWK Nyerah Nih Yeee :V'
             }).then(function(){
                 Swal.fire({
                     icon: 'info',

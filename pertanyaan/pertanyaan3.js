@@ -39,7 +39,7 @@ function pertanyaan3(){
             //Gagal Jawab Pertanyaan Ke -3
         
             Swal.fire ({
-                title: 'Cemen Gitu Aja Nyerah :V',
+                title: 'Yaahh Kok Nyerah Sih :V',
                 confirmButtonText: 'Ya Ben',
             }).then(function(){
                 Swal.fire({

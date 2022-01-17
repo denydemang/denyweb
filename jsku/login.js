@@ -53,6 +53,9 @@ let datauser = [
     {   namadepan : "faisal",
         namabelakang: "dwi kuncoro",
     },
+    {   namadepan : "amel",
+        namabelakang: "liyah",
+    },
 ]
 $(document).ready(function(){
     $('.submit').click(function(){
@@ -65,7 +68,7 @@ $(document).ready(function(){
                 Swal.fire({
                     position: 'top-middle',
                     icon: 'success',
-                    title: 'Monggo Pinarak :)',
+                    title: 'Silakan Masuk :)',
                     showConfirmButton: false,
                     timer: 1500
                     });

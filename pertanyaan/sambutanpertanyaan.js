@@ -1,7 +1,7 @@
 function sambutanpertanyaan(){
     Swal.fire({
         icon: 'success',
-        title: 'Hai '  +nama,
+        title: 'Hai Dek '  +nama,
         text: 'Selamat Datang Ke Game Tebak Tebakan'
     }).then(function(){
         Swal.fire({
@@ -12,15 +12,8 @@ function sambutanpertanyaan(){
             denyButtonText : 'Nggak Dulu Deh'
         }).then((result)=>{
             if (result.isConfirmed){
-                Swal.fire({
-                    title: 'Masuk ke Pertanyaan Pertama'
-                }).then(function(){
-                    // Masuk Ke Pertanyaan Pertama
-                    sessionStorage.setItem('udahMain','true');
-                    sessionStorage.setItem('udahMainTebakan','true');
-                    pertanyaan1();
-                })
-            } else if (result.isDenied){
+                pertanyaankhusus();
+            } else if (result.isDenied) {
                 Swal.fire({
                     title:"Yaahh Yaudahhh deh Bye"
                 })
@@ -28,3 +21,17 @@ function sambutanpertanyaan(){
         })
     })
 }
+// if (result.isConfirmed){
+//     Swal.fire({
+//         title: 'Masuk ke Pertanyaan Pertama'
+//     }).then(function(){
+//         // Masuk Ke Pertanyaan Pertama
+//         sessionStorage.setItem('udahMain','true');
+//         sessionStorage.setItem('udahMainTebakan','true');
+//         pertanyaan1();
+//     })
+// } else if (result.isDenied){
+//     Swal.fire({
+//         title:"Yaahh Yaudahhh deh Bye"
+//     })
+// }

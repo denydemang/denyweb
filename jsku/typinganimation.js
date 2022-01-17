@@ -1,5 +1,5 @@
 const judul = document.querySelector(".judul");
-const textArray = ["SUGENG RAWUH", "WELCOME TO MY WEBSITE","SILAKAN LOGIN DULU KAK"];
+const textArray = ["SELAMAT DATANG", "WELCOME TO MY WEBSITE","SILAKAN LOGIN DULU KAK"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
