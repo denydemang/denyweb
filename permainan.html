@@ -58,7 +58,8 @@
                                     <input type="hidden" name="nama" id="nama">
                                     <input type="hidden" name="tgluser" id="tgluser">
                                     <input type="hidden" name="tgldoi" id="tgldoi">
-                                    <input type="hidden" name="score" id="score">
+                                    <input type="hidden" name="scoretebakan" id="scoretebakan">
+                                    <input type="hidden" name="scoreislami" id="scoreislami">
                                     <button class="btn fw-bold" type="submit" style="background-color: chartreuse;color:white;">Keluar</button>
                                 </form>
                             </div>
@@ -77,6 +78,7 @@
                         <select class="form-select pilihpermainan" aria-label="Default select example">
                             <option selected disabled>Pilih Menu</option>
                             <option value="tebaktebakan" id="tebaktebakan">TEBAK TEBAKAN</option>
+                            <option value="kuisislami" id="kuisislami">KUIS ISLAMI</option>
                             <option value="tebakangka" id="tebakangka">TEBAK ANGKA</option>
                             <option value="primbonjawa" id="primbonjawa">PRIMBON JAWA</option>
                         </select>
@@ -119,8 +121,10 @@
         $('#tgluser').val(tgluser)
     var tgldoi = sessionStorage.getItem('tgldoi');
         $('#tgldoi').val(tgldoi);
-    var score = sessionStorage.getItem('score');
-        $('#score').val(score);
+    var score = sessionStorage.getItem('scoretebakan');
+        $('#scoretebakan').val(score);
+    var score = sessionStorage.getItem('scoreislami');
+        $('#scoreislami').val(score);
     var currentdate = new Date(); 
     var datetime = "Diakses Pada " + currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
@@ -132,12 +136,14 @@
     
 
 });
-    let score = 0;
+    let scoretebakan = 0;
+    let scoreislami= 0;
     let totalpertanyaan = 5;
     let namadepan = sessionStorage.getItem('firstname');
     let namabelakang =sessionStorage.getItem('lastname');
+    
     const nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
-
+    
     if ((sessionStorage.getItem('disabledTebakAngka'))== 'true') {
         $('#tebakangka').prop('disabled',true);
     }
@@ -147,7 +153,10 @@
     if ((sessionStorage.getItem('disabledWeton'))== 'true'){
         $('#primbonjawa').prop('disabled',true);
     }
-    if ((sessionStorage.getItem('disabledWeton'))== 'true' && (sessionStorage.getItem('disabledTebakAngka'))== 'true' && (sessionStorage.getItem('disabledTebakan'))== 'true' ){
+    if ((sessionStorage.getItem('disabledIslami'))== 'true'){
+        $('#kuisislami').prop('disabled',true);
+    }
+    if ((sessionStorage.getItem('disabledWeton'))== 'true' && (sessionStorage.getItem('disabledTebakAngka'))== 'true' && (sessionStorage.getItem('disabledTebakan'))== 'true' && (sessionStorage.getItem('disabledIslami'))== 'true'){
         Swal.fire({
             icon: 'warning',
             title: 'Semua Game Telah Dimainkan! Silakan Kamu Boleh Log Out',
@@ -158,6 +167,7 @@
         Swal.fire({
             icon: 'warning',
             title: 'Session Ramalan Primbon Weton Telah Berakhir',
+            text: 'Silakan Kamu Bisa Pilih Menu Lainnya Atau Log Out Di Pojok Kanan Atas',
 
         }).then(function(){
             sessionStorage.setItem('disabledWeton','true');
@@ -170,6 +180,7 @@
         Swal.fire({
             icon: 'warning',
             title: 'Session Main Tebak Angka Sudah Selesai',
+            text: 'Silakan Kamu Bisa Pilih Menu Lainnya Atau Log Out Di Pojok Kanan Atas',
         }).then(function(){
             sessionStorage.setItem('disabledTebakAngka','true');
             // $('#tebakangka').prop('disabled',true);
@@ -181,10 +192,23 @@
         Swal.fire({
             icon: 'warning',
             title: 'Session Main Tebak Tebakan Sudah Selesai',
+            text: 'Silakan Kamu Bisa Pilih Menu Lainnya Atau Log Out Di Pojok Kanan Atas',
         }).then(function(){
             sessionStorage.setItem('disabledTebakan','true');
             // $('#tebakangka').prop('disabled',true);
             sessionStorage.removeItem('udahMainTebakan');
+            location.reload()
+        })
+    }
+    else if ((sessionStorage.getItem('udahMainIslami'))=='true'){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Session Kuis Islami Sudah Selesai',
+            text: 'Silakan Kamu Bisa Pilih Menu Lainnya Atau Log Out Di Pojok Kanan Atas',
+        }).then(function(){
+            sessionStorage.setItem('disabledIslami','true');
+            // $('#tebakangka').prop('disabled',true);
+            sessionStorage.removeItem('udahMainIslami');
             location.reload()
         })
     }
@@ -200,7 +224,7 @@
         $('.pilihpermainan').on('change',function(){
             var val = $(this).val();
             if (val == 'tebaktebakan') {
-                score = 0;
+                scoretebakan = 0;
                 sambutanpertanyaan();
             }
             else if (val =='primbonjawa') {
@@ -210,6 +234,10 @@
             else if (val == 'tebakangka') {
                 sessionStorage.setItem('tebakangka','true');
                 document.location.href="gametebakangka.html"
+            }
+            else if (val= 'kuisislami'){
+                scoreislami = 0;
+                sambutanpertanyaanislami();
             }
         })
     })
@@ -221,3 +249,9 @@
 <script src="pertanyaan/pertanyaan3.js"></script>
 <script src="pertanyaan/pertanyaan4.js"></script>
 <script src="pertanyaan/pertanyaan5.js"></script>
+<script src="Islami/sambutan.js"></script>
+<script src="Islami/pertanyaanislami1.js"></script>
+<script src="Islami/pertanyaanislami2.js"></script>
+<script src="Islami/pertanyaanislami3.js"></script>
+<script src="Islami/pertanyaanislami4.js"></script>
+<script src="Islami/pertanyaanislami5.js"></script>

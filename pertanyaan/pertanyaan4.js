@@ -18,7 +18,7 @@ function pertanyaan4(){
     }).then((result)=>{
         if (result.isConfirmed){
             //Berhasil Jawab Pertanyaan Ke-4
-            score++
+            scoretebakan++;
             Swal.fire ({
                 icon: 'success',
                 title: 'Betul Sekali "Biduan Kamil" :D',

@@ -19,7 +19,7 @@ function pertanyaan2(){
     }).then((result)=>{
         if(result.isConfirmed){
             //Berhasil Jawab Pertanyaan Ke-2
-            score++
+            scoretebakan++;
             Swal.fire({
                 icon: 'success',
                 title: 'Jawaban Kamu Benar :D',

@@ -19,7 +19,7 @@ function pertanyaan3(){
     }).then((result)=>{
         if (result.isConfirmed){
             //Berhasil Jawab Pertanyaan Ke-3
-            score++
+            scoretebakan++;
             Swal.fire ({
                 icon: 'success',
                 title: 'Yap Betul Jawabanya Kaki Seribu',
