@@ -56,7 +56,7 @@ let datauser = [
     {   namadepan : "agung",
         namabelakang: "lia handayani",
     },
-    {   namadepan : " zulfa",
+    {   namadepan : "zulfa",
         namabelakang: "dzukarnain",
     },
 ]
