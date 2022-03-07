@@ -141,8 +141,13 @@
     let totalpertanyaan = 5;
     let namadepan = sessionStorage.getItem('firstname');
     let namabelakang =sessionStorage.getItem('lastname');
+    let nama;
+    if (namabelakang !==""){
+        nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
+    } else if (namabelakang ===""){
+         nama = namadepan[0].toUpperCase() + namadepan.substring(1)
+    }
     
-    const nama = namadepan[0].toUpperCase() + namadepan.substring(1) +' '+namabelakang[0].toUpperCase() + namabelakang.substring(1)
     
     if ((sessionStorage.getItem('disabledTebakAngka'))== 'true') {
         $('#tebakangka').prop('disabled',true);
@@ -218,7 +223,9 @@
         var namadepan = sessionStorage.getItem('firstname');
         var namabelakang = sessionStorage.getItem('lastname');
         var namadepan = namadepan[0].toUpperCase() + namadepan.substring(1);
+        if (namabelakang!==""){
         var namabelakang = namabelakang[0].toUpperCase() + namabelakang.substring(1);
+        }
         $('.avatar').html('<i class="fas fa-user me-1"></i>'+' '+namadepan+' '+namabelakang);
         $('.judul h2').html(namadepan+' '+namabelakang);
         $('.pilihpermainan').on('change',function(){
