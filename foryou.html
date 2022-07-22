@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,17 +122,28 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="kliksaya">
+      <p class="text-white">
+        Click This <i class="fas fa-arrow-right"></i>
+      </p>
+      <br>
+      <audio src="mp3/Shane-Filan-Beautiful-In-White-P.mp3"></audio>
+      <i onclick="klik()" class="fas fa-heart text-danger animate__animated animate__bounce animate__repeat-3" style="font-size:60px"></i>
+    </div>
+    <div class="container d-none" id="utama">
+        <!-- <embed src="mp3/Shane-Filan-Beautiful-In-White-P.mp3" type="audio" autostart> -->
+       
         <p class="icons d-none text-white p-5">
             Coba Klik Icon Hati Di Bawah 
         </p>
-        <h1 id="teks" class="d-none text-white animate__animated animate__pulse">I Love You Dek Sop <i
+        <h1 id="teks" class="d-none text-white animate__animated animate__pulse">Saranghamnida <i
             class="fas fa-heart text-danger animate__animated animate__heartBeat animate__repeat-5"></i></h1>
         <p class="teksberjalan">
             &#10084 Hi Dek Sopi <span class="typed-text"></span><span class="cursor">&nbsp;</span>
         </p>
     </div>
     <footer class="text-center text-lg-start fixed-bottom">
+    
         <!-- Copyright -->
         <div class="text-center text-white p-1 puter">
             © 2022 Copyright:
@@ -155,13 +167,25 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
 </script>
 <script>
- setTimeout(function(){
+function klik(){
+
+  const tampil = document.getElementById('utama');
+  const kliksaya = document.getElementById('kliksaya');
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+  kliksaya.classList.add('d-none');
+  tampil.classList.remove('d-none');
+  setTimeout(type, newTextDelay + 280);
+  setTimeout(function(){
     const icon = document.querySelector('.icons');
     const teksberjalan= document.querySelector('.teksberjalan');
     icon.classList.remove('d-none');
     teksberjalan.classList.add('d-none');
 
- },120000)
+ },101320)
+}
+ 
 document.querySelector('.hati').addEventListener('click', function () {
 confetti();
 const icons = document.querySelector('.icons')
@@ -175,7 +199,7 @@ teksberjalan.classList.add('d-none');
 
 
 const judul = document.querySelector(".typed-text");
-const textArray = ["I'd Like To Tell You Something", "Kamu Tuh Kadang Ngeselin Tau Gak", "Kamu Ngeselin Tapi Ngangenin Juga","Sikap Cuek Dan Dinginmu Masya Allah", "Apapun Itu Mas Tetap Sayang Kamu", "Fokus Sama Tujuanmu ,Semangat!", "Solat Jangan Sampai Ditinggalin", "Maafin Mas Kalo Suka Maksa Ini Itu","I Just Miss You Dek", "Manisku, I Love You "];
+const textArray = ["I'd Like To Tell You Something", "Walau Di Lautan Jarak Yang Membentang", "KuTitipkan Rindu Pada Langit Yang Kau Tatap.", "Dadaku Sesak oleh Rindu Yang Terus Menggerutu.", "Rindu ini, Sayang ini, Hanya Butuh Sandaran", "Maaf Kaka Sering Memaksakan Kehendak", "Itu Semua Karena Aku Sayang Kamu"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
@@ -206,9 +230,7 @@ if (charIndex > 0){
     setTimeout(type, typingDelay + 1100);
 }
 }
-document.addEventListener("DOMContentLoaded",function(){
-setTimeout(type, newTextDelay + 280);
-});
+
 
 'use strict';
 
