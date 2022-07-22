@@ -17,6 +17,7 @@ const form = document.forms['permainan']
     e.preventDefault()
     sessionStorage.removeItem('login');
     sessionStorage.removeItem('disabledTebakan');
+    sessionStorage.removeItem('disabledIslami');
     sessionStorage.removeItem('disabledTebakAngka');
     sessionStorage.removeItem('disabledWeton');
     sessionStorage.removeItem('lastname');
@@ -29,7 +30,8 @@ const form = document.forms['permainan']
         .catch(error => Swal.fire('Feedback Gagal Dikirim !' +error.message,'','warning').then(function(){sessionStorage.clear(); location.reload();}))
         Swal.fire ({
             title: 'Thank You',
-            timer: 1500
+            timer: 1600,
+            showConfirmButton: false
         })
         setTimeout(function(){
             document.location.href="index.html";  
