@@ -53,8 +53,6 @@ let datauser = [
     {   namadepan : "faisal",
         namabelakang: "dwi kuncoro",
     },
-<<<<<<< HEAD
-=======
     {   namadepan : "agung",
         namabelakang: "lia handayani",
     },
@@ -64,7 +62,7 @@ let datauser = [
     {   namadepan : "tia",
         namabelakang: "indriyastuti",
     },
->>>>>>> 67a5e09fe62dd1af48691194047403739dfac3bf
+
     {   namadepan : "diyah",
         namabelakang: "",
     },

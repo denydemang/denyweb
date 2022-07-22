@@ -18,7 +18,6 @@ function pertanyaan5(){
     }).then((result)=>{
         if (result.isConfirmed){
             //Berhasil Jawab Pertanyaan Ke -5
-            score++
             scoretebakan++;
             Swal.fire({
                 icon: 'success',
