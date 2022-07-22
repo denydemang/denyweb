@@ -19,7 +19,6 @@ function pertanyaan5(){
         if (result.isConfirmed){
             //Berhasil Jawab Pertanyaan Ke -5
             score++
-            console.log(score);
             Swal.fire({
                 icon: 'success',
                 title: 'Yap Betul Ojek Payung'
