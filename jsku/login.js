@@ -66,6 +66,9 @@ let datauser = [
     {   namadepan : "diyah",
         namabelakang: "",
     },
+    {   namadepan : "Dek",
+        namabelakang: "Sopi",
+    },
 ]
 $(document).ready(function(){
     $('.submit').click(function(){
