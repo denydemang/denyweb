@@ -66,8 +66,8 @@ let datauser = [
     {   namadepan : "diyah",
         namabelakang: "",
     },
-    {   namadepan : "Dek",
-        namabelakang: "Sopi",
+    {   namadepan : "dek",
+        namabelakang: "sopi",
     },
 ]
 $(document).ready(function(){
