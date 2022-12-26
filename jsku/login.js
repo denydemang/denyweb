@@ -67,7 +67,7 @@ let datauser = [
         namabelakang: "",
     },
     {   namadepan : "amani",
-        namabelakang: "fahmi",
+        namabelakang: "fahim",
     },
     {   namadepan : "nura",
         namabelakang: "amalia",
